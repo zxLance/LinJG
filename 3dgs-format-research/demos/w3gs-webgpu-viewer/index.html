@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W3GS Raw WebGPU Viewer</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>W3GS Raw WebGPU Viewer</h1>
+      <p>Prototype A: replacement LoD active set -> SH0 / SH3 raw payload -> WebGPU buffer.</p>
+    </div>
+    <div class="status-pill" id="statusPill">Initializing</div>
+  </header>
+
+  <main>
+    <section class="panel controls">
+      <h2>Controls</h2>
+      <div class="button-row">
+        <button id="loadStartupButton">Load Startup</button>
+        <button id="loadLeavesButton">Load Leaves</button>
+        <button id="loadAllButton">Load All</button>
+        <button id="clearButton" class="secondary">Clear</button>
+      </div>
+      <label>
+        Point scale
+        <input id="pointScale" type="range" min="0.5" max="12" step="0.5" value="4">
+      </label>
+      <label>
+        Opacity boost
+        <input id="opacityBoost" type="range" min="0.2" max="4" step="0.1" value="1.4">
+      </label>
+      <label>
+        <span class="label-row"><span>Camera azimuth</span><output id="cameraAzimuthValue">0 deg</output></span>
+        <input id="cameraAzimuth" type="range" min="0" max="360" step="1" value="0">
+      </label>
+      <label class="check-row">
+        <input id="autoOrbit" type="checkbox">
+        <span>Auto orbit</span>
+      </label>
+      <label class="check-row">
+        <input id="fullSh3" type="checkbox" checked>
+        <span>Full SH3</span>
+      </label>
+    </section>
+
+    <section class="panel stats">
+      <h2>Sample / GPU</h2>
+      <div class="stat-grid">
+        <div><span>Sample</span><strong id="sampleName">-</strong></div>
+        <div><span>LoD mode</span><strong id="lodMode">-</strong></div>
+        <div><span>Codec / profile</span><strong id="codecProfile">-</strong></div>
+        <div><span>SH degree</span><strong id="shDegree">-</strong></div>
+        <div><span>Nodes</span><strong id="nodeCount">-</strong></div>
+        <div><span>Loaded chunks</span><strong id="chunkCount">0</strong></div>
+        <div><span>Active chunks</span><strong id="activeChunkCount">0</strong></div>
+        <div><span>Active splats</span><strong id="splatCount">0</strong></div>
+        <div><span>GPU buffer</span><strong id="gpuBytes">0 MB</strong></div>
+        <div><span>Frame</span><strong id="frameTime">-</strong></div>
+      </div>
+    </section>
+
+    <section class="panel canvas-panel">
+      <div class="section-head">
+        <h2>Canvas</h2>
+        <div id="webgpuStatus">Checking WebGPU...</div>
+      </div>
+      <canvas id="viewerCanvas"></canvas>
+    </section>
+
+    <section class="panel log-panel">
+      <h2>Log</h2>
+      <pre id="logOutput"></pre>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

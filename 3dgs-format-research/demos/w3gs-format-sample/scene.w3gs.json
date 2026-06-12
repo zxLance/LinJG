@@ -1,0 +1,64 @@
+{
+  "format": "W3GS",
+  "version": "0.1",
+  "asset": {
+    "generator": "LinJG W3GS research prototype",
+    "created": "2026-06-08",
+    "payloadStatus": "placeholder"
+  },
+  "scene": {
+    "name": "w3gs-demo-room",
+    "description": "A synthetic room-scale W3GS scene used to demonstrate manifest, node tree, ordered layers, chunk table, and Web scheduling hints.",
+    "coordinateSystem": "local",
+    "upAxis": "Y",
+    "units": "meter"
+  },
+  "bounds": {
+    "type": "aabb",
+    "min": [-6.0, -1.0, -4.0],
+    "max": [6.0, 4.0, 4.0]
+  },
+  "files": {
+    "nodes": "nodes.w3gs.json",
+    "chunks": "chunks.w3gs.json",
+    "payloadBaseUri": "payload/"
+  },
+  "codecs": [
+    {
+      "id": "raw-gaussian-v0",
+      "kind": "raw",
+      "attributeSchema": "gaussian-basic-v0",
+      "decodeTarget": "cpu",
+      "description": "Uncompressed placeholder payload profile for Prototype 0 and early Prototype 1."
+    },
+    {
+      "id": "spz-placeholder-v0",
+      "kind": "spz",
+      "attributeSchema": "gaussian-spz-v0",
+      "decodeTarget": "worker",
+      "description": "Placeholder profile showing that W3GS chunks can reference codec-specific payload."
+    }
+  ],
+  "entry": {
+    "rootNode": "root",
+    "startupSet": ["root.base"],
+    "startupPolicy": "show-root-base-before-refinement"
+  },
+  "runtimeProfiles": {
+    "desktop": {
+      "memoryBudgetMB": 512,
+      "maxConcurrentRequests": 8,
+      "preferredCodec": "raw-gaussian-v0"
+    },
+    "mobile": {
+      "memoryBudgetMB": 128,
+      "maxConcurrentRequests": 4,
+      "preferredCodec": "raw-gaussian-v0"
+    }
+  },
+  "experimentHints": {
+    "intendedBaselines": ["full-loading", "spatial-only", "progressive-only", "w3gs-scheduling"],
+    "primaryMetrics": ["firstRenderMs", "downloadedBytes", "requestCount", "overfetchRatio", "localDetailMs", "peakGpuBytes"]
+  }
+}
+

@@ -1,0 +1,79 @@
+{
+  "reportVersion": "1.0",
+  "generatedAtUtc": "2026-06-11T08:00:17.682Z",
+  "experiment": "W3GS 10K parent-summary SH3 baseline",
+  "input": {
+    "path": "datasets/unified-huce-zhanting/HuCeZhanTing-10k-seed20260611.ply",
+    "bytes": 2481748,
+    "sha256": "f72bd6268c12a1ddab79d9ebbcdfbbf29c275fc08395656ae9b8ed433f108cb4",
+    "vertices": 10000,
+    "propertyCount": 62,
+    "shDegree": 3,
+    "fRestCount": 45
+  },
+  "converter": {
+    "path": "tools/ply-to-w3gs/convert_ply_to_w3gs.py",
+    "sha256": "670134e50bb57ad9a097cca57acb91ff0ab46b04fd2b54039c15d4a8603e003a",
+    "command": "python tools/ply-to-w3gs/convert_ply_to_w3gs.py --input datasets/unified-huce-zhanting/HuCeZhanTing-10k-seed20260611.ply --output demos/w3gs-from-ply/huce-zhanting-10k-parent-summary-sh3 --max-splats 10000 --lod-mode parent-summary --max-leaf-splats 2500 --max-depth 4 --payload-profile raw-gaussian-sh3-v0",
+    "wallSeconds": 0.868374,
+    "peakRssBytes": null
+  },
+  "output": {
+    "path": "demos/w3gs-from-ply/huce-zhanting-10k-parent-summary-sh3",
+    "profile": "raw-gaussian-sh3-v0",
+    "schema": "gaussian-sh3-v0",
+    "bytesPerSplat": 236,
+    "manifestBytes": 76228,
+    "payloadBytes": 2479416,
+    "payloadSha256": "3570fb0fd00e4335afbdba939502ade092d9a9085db016abd8fc7a121513b072",
+    "firstRenderBytes": 41064,
+    "nodes": 25,
+    "layers": 25,
+    "chunks": 25,
+    "convertedSplats": 10000,
+    "leafOriginalSplats": 10000,
+    "internalSummarySplats": 506,
+    "totalPayloadSplats": 10506,
+    "summaryOverhead": 0.0506
+  },
+  "relativeToSh0": {
+    "sh0Path": "demos/w3gs-from-ply/huce-zhanting-10k-parent-summary",
+    "sh0BytesPerSplat": 56,
+    "sh0PayloadBytes": 588336,
+    "sh0FirstRenderBytes": 9744,
+    "payloadByteRatio": 4.2142857143,
+    "payloadByteIncrease": 1891080,
+    "startupByteIncrease": 31320,
+    "topologyAndSplatCountsEqual": true
+  },
+  "parentSummarySh3": {
+    "method": "importance-weighted-coefficient-average-v0",
+    "coefficientsAveraged": 48,
+    "limitation": "Coefficient-wise averaging is a converter LoD approximation and does not guarantee radiance-field or pixel equivalence."
+  },
+  "validation": {
+    "tool": "tools/w3gs-validator/validate_w3gs.py",
+    "sha256": "0ee0939ad5a6efa40fc3b940ba152d821b7c7c27dcd813e50f47f9a1930994a1",
+    "exitCode": 0,
+    "wallSeconds": 0.494353,
+    "errors": 0,
+    "warnings": 1,
+    "info": 1,
+    "report": "validation-report.json"
+  },
+  "webgpu": {
+    "viewer": "demos/w3gs-webgpu-viewer/app.js",
+    "viewerSha256": "77e232b691e192082e57bb9fe68f72a98caa8867ab6db571dc29121ee4829645",
+    "smokeRunner": "demos/w3gs-webgpu-viewer/webgpu_smoke_test.mjs",
+    "smokeRunnerSha256": "23ded4dbd1d277b91797aee47439183367452853a56875cda403ba258b20c648",
+    "report": "evidence/webgpu-smoke-report.json",
+    "passed": true,
+    "loadedChunks": 25,
+    "activeChunks": 22,
+    "activeSplats": 10000,
+    "gpuBufferBytes": 2360000,
+    "cameraAzimuths": [0, 180],
+    "screenshotsDiffer": true,
+    "payloadTestTransport": "extensionless local alias to avoid external download-manager interception"
+  }
+}

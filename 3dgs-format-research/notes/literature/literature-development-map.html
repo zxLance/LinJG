@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3DGS 文献发展脉络图谱</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --text: #1b2430;
+      --muted: #647184;
+      --line: #d8dee9;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+    }
+
+    header {
+      padding: 24px 32px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(360px, 0.9fr) minmax(520px, 1.4fr);
+      gap: 16px;
+      padding: 16px;
+      min-height: calc(100vh - 98px);
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    button {
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      padding: 7px 12px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    textarea {
+      width: 100%;
+      height: calc(100vh - 170px);
+      min-height: 520px;
+      padding: 14px;
+      border: 0;
+      resize: none;
+      outline: none;
+      font: 13px/1.55 Consolas, "Cascadia Mono", monospace;
+      color: #111827;
+      background: #fbfcfe;
+    }
+
+    #preview {
+      height: calc(100vh - 170px);
+      min-height: 520px;
+      padding: 18px;
+      overflow: auto;
+    }
+
+    #preview svg {
+      max-width: none;
+    }
+
+    .error {
+      color: #b42318;
+      white-space: pre-wrap;
+      font-family: Consolas, "Cascadia Mono", monospace;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      textarea,
+      #preview {
+        height: 520px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>3DGS 数据格式相关文献发展脉络图谱</h1>
+    <p>左侧是可编辑 Mermaid 源码，右侧是渲染结果。修改源码后点击“重新渲染”。</p>
+  </header>
+
+  <main>
+    <section>
+      <div class="section-head">
+        <h2>Mermaid 源码</h2>
+        <button id="renderButton" type="button">重新渲染</button>
+      </div>
+      <textarea id="source" spellcheck="false">flowchart LR
+  A["3DGS 表示&lt;br/&gt;显式 Gaussian 属性"] --&gt; B["数据规模问题&lt;br/&gt;PLY 大 / 加载慢 / 显存高"]
+  B --&gt; C["压缩编码&lt;br/&gt;剪枝 / 量化 / 码本 / 熵编码"]
+  C --&gt; D["渐进与 LoD&lt;br/&gt;先粗后细 / 空间层级"]
+  D --&gt; E["Streaming&lt;br/&gt;视锥 / 码率 / 显存调度"]
+  E --&gt; F["Web 工程格式&lt;br/&gt;SPZ / SOG / splat / WebGPU"]
+  F --&gt; G["标准化互操作&lt;br/&gt;glTF / 3D Tiles / MPEG / USD"]
+
+  A1["3DGS 2023"] --&gt; A
+  A2["Mip-Splatting 2024"] --&gt; A
+  A3["Scaffold-GS 2024"] --&gt; A
+
+  C1["LightGaussian 2024"] --&gt; C
+  C2["Compact3D / CompGS 2024"] --&gt; C
+  C3["HAC 2024"] --&gt; C
+  C4["PCGS 2025"] --&gt; C
+
+  D1["Octree-GS 2024"] --&gt; D
+  D2["CityGaussian 2024"] --&gt; D
+  D3["VastGaussian 2024"] --&gt; D
+  D4["A LoD of Gaussians 2025"] --&gt; D
+
+  E1["L3GS 2025"] --&gt; E
+  E2["3DGStreaming 2025"] --&gt; E
+  E3["StreamingGS 2025"] --&gt; E
+
+  F1["WebSplatter 2026"] --&gt; F
+  F2["SuperSplat / SOG"] --&gt; F
+  F3["splat-transform"] --&gt; F
+
+  G1["KHR_gaussian_splatting"] --&gt; G
+  G2["SPZ"] --&gt; G
+  G3["3D Tiles"] --&gt; G
+  G4["MPEG GSC"] --&gt; G
+  G5["OpenUSD"] --&gt; G
+
+  P["我们的论文&lt;br/&gt;Web 流式 3DGS 数据格式抽象"] -.-&gt; D
+  P -.-&gt; E
+  P -.-&gt; F
+  P -.-&gt; G</textarea>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>渲染预览</h2>
+      </div>
+      <div id="preview"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: "loose",
+      theme: "base",
+      themeVariables: {
+        fontFamily: "Microsoft YaHei, Segoe UI, Arial, sans-serif",
+        primaryColor: "#eef4ff",
+        primaryBorderColor: "#2563eb",
+        primaryTextColor: "#1b2430",
+        lineColor: "#5b677a",
+        tertiaryColor: "#ffffff"
+      }
+    });
+
+    const source = document.getElementById("source");
+    const preview = document.getElementById("preview");
+    const button = document.getElementById("renderButton");
+
+    async function renderGraph() {
+      const code = source.value;
+      const id = `graph-${Date.now()}`;
+      preview.innerHTML = "";
+
+      try {
+        const result = await mermaid.render(id, code);
+        preview.innerHTML = result.svg;
+      } catch (error) {
+        preview.innerHTML = `<div class="error">${String(error)}</div>`;
+      }
+    }
+
+    button.addEventListener("click", renderGraph);
+    renderGraph();
+  </script>
+</body>
+</html>

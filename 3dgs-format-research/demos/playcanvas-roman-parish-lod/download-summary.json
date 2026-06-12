@@ -1,0 +1,12 @@
+{
+  "source": "https://code.playcanvas.com/examples_data/example_roman_parish_02/lod-meta.json",
+  "downloadedAt": "2026-06-04T11:19:13",
+  "lodLevels": 7,
+  "manifestFilenames": 131,
+  "environment": "environment/environment.sog",
+  "expectedReferencedFiles": 788,
+  "missingReferencedFiles": 0,
+  "filesOnDisk": 788,
+  "totalBytes": 814767711.0,
+  "totalMiB": 777.02
+}

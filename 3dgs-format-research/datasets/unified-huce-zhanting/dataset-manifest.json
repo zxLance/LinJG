@@ -1,0 +1,481 @@
+{
+  "manifestVersion": "1.0",
+  "generatedAtUtc": "2026-06-11T05:58:53.767372+00:00",
+  "source": {
+    "path": "D:\\DATA\\3DGS\\PLY\\HuCeZhanTing.ply",
+    "bytes": 701875230,
+    "sha256": "a4624ae67bf4d7f0764b714531f1cc21707ce2b9fa936a5fc6d85dd9cea64cea",
+    "format": "binary_little_endian",
+    "plyVersion": "1.0",
+    "vertexCount": 2830135,
+    "headerBytes": 1750,
+    "recordSize": 248,
+    "comments": [
+      "meta {\"created\": \"huace\", \"date\": \"20260206152559\", \"sky\": 0, \"scaff\": 0, \"min\": [-3.067934036254883, -10.522388458251953, -7.277275085449219], \"max\": [61.52083206176758, 66.57962799072266, 6.156389236450195]}"
+    ],
+    "properties": [
+      {
+        "name": "x",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "y",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "z",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "nx",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "ny",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "nz",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_dc_0",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_dc_1",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_dc_2",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_0",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_1",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_2",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_3",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_4",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_5",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_6",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_7",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_8",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_9",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_10",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_11",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_12",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_13",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_14",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_15",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_16",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_17",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_18",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_19",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_20",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_21",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_22",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_23",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_24",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_25",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_26",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_27",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_28",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_29",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_30",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_31",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_32",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_33",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_34",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_35",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_36",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_37",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_38",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_39",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_40",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_41",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_42",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_43",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "f_rest_44",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "opacity",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "scale_0",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "scale_1",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "scale_2",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "rot_0",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "rot_1",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "rot_2",
+        "type": "float",
+        "bytes": 4
+      },
+      {
+        "name": "rot_3",
+        "type": "float",
+        "bytes": 4
+      }
+    ],
+    "propertyCount": 62,
+    "fRestCount": 45,
+    "shOrder": 3,
+    "nonVertexElements": []
+  },
+  "sampling": {
+    "algorithm": "splitmix64-priority-bottom-k-v1",
+    "description": "Assign each source vertex a deterministic SplitMix64 priority from (index XOR seed); choose the lowest K priorities. Smaller outputs take prefixes of the same ranking.",
+    "seed": 20260611,
+    "withoutReplacement": true,
+    "nested": true,
+    "outputOrder": "ascending source vertex index",
+    "blockRecords": 16384,
+    "counts": [
+      10000,
+      250000
+    ]
+  },
+  "outputs": [
+    {
+      "label": "10K",
+      "path": "HuCeZhanTing-10k-seed20260611.ply",
+      "vertexCount": 10000,
+      "bytes": 2481748,
+      "sha256": "f72bd6268c12a1ddab79d9ebbcdfbbf29c275fc08395656ae9b8ed433f108cb4",
+      "selectedIndices": {
+        "minimum": 270,
+        "maximum": 2830121,
+        "first16": [
+          270,
+          409,
+          1043,
+          1124,
+          1160,
+          1376,
+          2688,
+          3218,
+          3836,
+          3897,
+          4180,
+          4385,
+          4397,
+          4661,
+          4686,
+          5658
+        ],
+        "last16": [
+          2825161,
+          2825326,
+          2825378,
+          2825542,
+          2825989,
+          2826290,
+          2827100,
+          2828875,
+          2829093,
+          2829240,
+          2829265,
+          2829378,
+          2829801,
+          2830036,
+          2830109,
+          2830121
+        ],
+        "sha256Uint64LE": "458a52fbd3a63823ebdbd81b8474c678ce45d2688b745290203e84a47be6e3ce"
+      },
+      "headerBytes": 1748,
+      "recordSize": 248
+    },
+    {
+      "label": "250K",
+      "path": "HuCeZhanTing-250k-seed20260611.ply",
+      "vertexCount": 250000,
+      "bytes": 62001749,
+      "sha256": "037ab106a7da6d92b6de7f6e807010f29572be67d1999c653edd80090a2eaf6c",
+      "selectedIndices": {
+        "minimum": 0,
+        "maximum": 2830121,
+        "first16": [
+          0,
+          8,
+          30,
+          34,
+          39,
+          45,
+          57,
+          74,
+          99,
+          102,
+          121,
+          125,
+          129,
+          140,
+          149,
+          163
+        ],
+        "last16": [
+          2829988,
+          2829990,
+          2829996,
+          2830015,
+          2830017,
+          2830032,
+          2830036,
+          2830042,
+          2830048,
+          2830059,
+          2830065,
+          2830072,
+          2830088,
+          2830095,
+          2830109,
+          2830121
+        ],
+        "sha256Uint64LE": "0b0ba789534eadad9f215aac70d209dc5871fafc0baef7c78607a5ee0f2d6a88"
+      },
+      "headerBytes": 1749,
+      "recordSize": 248
+    }
+  ],
+  "verification": {
+    "sourceFileStableDuringRun": true,
+    "headersReparsed": true,
+    "propertiesAndCommentsPreserved": true,
+    "fileSizesMatchFixedRecordLayout": true,
+    "nestedSubsetChecks": [
+      {
+        "smallerCount": 10000,
+        "largerCount": 250000,
+        "strictIndexSubset": true,
+        "rawRecordBytesMatch": true,
+        "method": "two-pointer comparison using recorded source indices and exact fixed-size record bytes"
+      }
+    ]
+  },
+  "performance": {
+    "selectionWallSeconds": 11.590323,
+    "scanWriteHashWallSeconds": 4.889298,
+    "totalWallSeconds": 16.839887,
+    "peakRssBytes": null,
+    "peakRssMethod": "unavailable: Python standard library on Windows does not provide reliable process peak RSS"
+  },
+  "provenance": {
+    "tool": "tools/ply-sampler/sample_ply.py",
+    "toolSha256": "433a85315b4a82600617f33ad61d24c5e4b63dadbf0de25676e9201a92548f0c",
+    "python": "3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]",
+    "command": "D:\\Program Files of Me\\Python311\\python.exe D:\\Documents\\Project\\Python_project\\LinJG\\3dgs-format-research\\tools\\ply-sampler\\sample_ply.py --input D:\\DATA\\3DGS\\PLY\\HuCeZhanTing.ply --output-dir .\\datasets\\unified-huce-zhanting --counts 10k 250k --seed 20260611"
+  },
+  "license": {
+    "status": "unknown",
+    "redistribution": "not-cleared",
+    "note": "The source data license and permission to redistribute derived subsets must be confirmed before publication."
+  }
+}

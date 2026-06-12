@@ -1,0 +1,21 @@
+127.0.0.1 - - [08/Jun/2026 16:30:08] "GET /w3gs-experiment-platform/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:30:08] "GET /w3gs-experiment-platform/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:30:08] "GET /w3gs-experiment-platform/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:30:08] "GET /w3gs-format-sample/scene.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:30:08] "GET /w3gs-format-sample/nodes.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:30:08] code 404, message File not found
+127.0.0.1 - - [08/Jun/2026 16:30:08] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [08/Jun/2026 16:30:08] "GET /w3gs-format-sample/chunks.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:30:44] "GET /w3gs-format-sample/scene.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:30:46] "GET /w3gs-experiment-platform/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:37] "GET /w3gs-experiment-platform/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:37] "GET /w3gs-experiment-platform/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:37] "GET /w3gs-experiment-platform/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:37] "GET /w3gs-format-sample/scene.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:38] "GET /w3gs-format-sample/nodes.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:38] "GET /w3gs-format-sample/chunks.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:31:38] "GET /w3gs-experiment-platform HTTP/1.1" 301 -
+127.0.0.1 - - [08/Jun/2026 16:31:38] "GET /w3gs-experiment-platform/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 16:49:47] code 404, message File not found
+127.0.0.1 - - [08/Jun/2026 16:49:47] "GET /favicon.ico HTTP/1.1" 404 -

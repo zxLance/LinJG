@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spark 2.x 3DGS LoD Streaming Test</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: #050505;
+        color: #f6f7fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        background: #050505;
+      }
+
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        touch-action: none;
+      }
+
+      button,
+      select,
+      input {
+        font: inherit;
+      }
+
+      .hud {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 10;
+        width: min(360px, calc(100vw - 24px));
+        padding: 12px;
+        background: rgb(10 12 18 / 78%);
+        border: 1px solid rgb(255 255 255 / 14%);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 12px 40px rgb(0 0 0 / 36%);
+      }
+
+      .hud h1 {
+        margin: 0 0 10px;
+        font-size: 15px;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+
+      .metric {
+        min-width: 0;
+        padding: 7px 8px;
+        background: rgb(255 255 255 / 8%);
+        border: 1px solid rgb(255 255 255 / 8%);
+        border-radius: 6px;
+      }
+
+      .metric span {
+        display: block;
+        margin-bottom: 2px;
+        color: rgb(246 247 251 / 68%);
+        font-size: 11px;
+        line-height: 1.1;
+      }
+
+      .metric strong {
+        display: block;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.15;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .controls {
+        display: grid;
+        gap: 8px;
+      }
+
+      .control-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .control-row label,
+      .url-label {
+        color: rgb(246 247 251 / 76%);
+        font-size: 12px;
+      }
+
+      select {
+        min-width: 98px;
+        height: 30px;
+        color: #f6f7fb;
+        background: #141923;
+        border: 1px solid rgb(255 255 255 / 18%);
+        border-radius: 6px;
+      }
+
+      .toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: rgb(246 247 251 / 80%);
+        font-size: 12px;
+      }
+
+      .toggle input {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        accent-color: #38c172;
+      }
+
+      .button-row {
+        display: flex;
+        gap: 8px;
+      }
+
+      .button-row button {
+        flex: 1;
+        height: 32px;
+        color: #f6f7fb;
+        cursor: pointer;
+        background: #1c2431;
+        border: 1px solid rgb(255 255 255 / 18%);
+        border-radius: 6px;
+      }
+
+      .button-row button:hover {
+        background: #263247;
+      }
+
+      .url-box {
+        display: block;
+        overflow-wrap: anywhere;
+        margin-top: 5px;
+        padding: 7px 8px;
+        color: rgb(246 247 251 / 78%);
+        background: rgb(255 255 255 / 7%);
+        border-radius: 6px;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .status {
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+        z-index: 10;
+        max-width: min(420px, calc(100vw - 24px));
+        padding: 10px 12px;
+        color: rgb(246 247 251 / 86%);
+        background: rgb(10 12 18 / 74%);
+        border: 1px solid rgb(255 255 255 / 14%);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .loading {
+        position: fixed;
+        inset: 0;
+        z-index: 9;
+        display: grid;
+        place-items: center;
+        pointer-events: none;
+      }
+
+      .loading[hidden] {
+        display: none;
+      }
+
+      .loading-card {
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        padding: 18px 20px;
+        color: #fff;
+        background: rgb(10 12 18 / 72%);
+        border: 1px solid rgb(255 255 255 / 14%);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+      }
+
+      .spinner {
+        width: 30px;
+        height: 30px;
+        border: 3px solid rgb(255 255 255 / 22%);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+
+      .error {
+        position: fixed;
+        inset: 16px;
+        z-index: 20;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        color: #fff;
+        background: rgb(120 18 18 / 86%);
+        border: 1px solid rgb(255 255 255 / 18%);
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .error.visible {
+        display: flex;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (max-width: 620px) {
+        .hud {
+          right: 8px;
+          left: 8px;
+          width: auto;
+          padding: 10px;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .status {
+          right: 8px;
+          bottom: 8px;
+          left: 8px;
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.180.0/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+          "@sparkjsdev/spark": "https://sparkjs.dev/releases/spark/2.1.0/spark.module.js"
+        }
+      }
+    </script>
+
+    <canvas id="scene" tabindex="0" aria-label="Spark 3DGS LoD streaming viewport"></canvas>
+
+    <section class="hud" aria-label="Performance controls">
+      <h1>Spark 2.x 3DGS LoD Streaming Test</h1>
+      <div class="metrics">
+        <div class="metric">
+          <span>FPS</span>
+          <strong id="fps">--</strong>
+        </div>
+        <div class="metric">
+          <span>Frame</span>
+          <strong id="frame-time">-- ms</strong>
+        </div>
+        <div class="metric">
+          <span>Active splats</span>
+          <strong id="active-splats">0</strong>
+        </div>
+        <div class="metric">
+          <span>Pages loaded</span>
+          <strong id="pages-loaded">0 / 0</strong>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control-row">
+          <label for="lod-scale">LoD detail</label>
+          <select id="lod-scale">
+            <option value="0.25">0.25</option>
+            <option value="0.5">0.5</option>
+            <option value="1">1.0</option>
+            <option value="1.5" selected>1.5</option>
+            <option value="2">2.0</option>
+          </select>
+        </div>
+
+        <label class="toggle">
+          <input id="high-dpi" type="checkbox" checked>
+          High DPI
+        </label>
+
+        <label class="toggle">
+          <input id="page-flash" type="checkbox" checked>
+          Flash newly streamed pages
+        </label>
+
+        <label class="toggle">
+          <input id="pause-fetching" type="checkbox">
+          Pause page fetching
+        </label>
+
+        <div class="button-row">
+          <button id="reset-camera" type="button">Reset camera</button>
+          <button id="capture-row" type="button">Log metrics</button>
+        </div>
+
+        <div>
+          <span class="url-label">RAD asset</span>
+          <code id="asset-url" class="url-box"></code>
+        </div>
+      </div>
+    </section>
+
+    <div id="loading" class="loading">
+      <div class="loading-card">
+        <div class="spinner"></div>
+        <div>Loading first streamed splats...</div>
+      </div>
+    </div>
+
+    <aside class="status">
+      Drag to look. Use W/A/S/D to move, Q/E for down/up, Shift to run.
+      Watch DevTools Network for .rad and .radc requests.
+    </aside>
+
+    <div id="error" class="error"></div>
+
+    <script>
+      window.__showSparkError = (message) => {
+        const error = document.getElementById("error");
+        error.textContent = message;
+        error.classList.add("visible");
+      };
+
+      window.addEventListener("error", (event) => {
+        window.__showSparkError(event.message || "Unexpected page error");
+      });
+
+      window.addEventListener("unhandledrejection", (event) => {
+        window.__showSparkError(
+          event.reason?.message || String(event.reason || "Unhandled rejection"),
+        );
+      });
+    </script>
+
+    <script type="module">
+      import * as THREE from "three";
+      import { SparkRenderer, SplatMesh, dyno } from "@sparkjsdev/spark";
+
+      const COIT_RAD_URL =
+        "https://wlt-ai-cdn.art/spark-2.0/rad/coit-40m-sh1-lod.rad";
+      const PAGE_SIZE = 65536;
+      const START_POS = new THREE.Vector3(-0.858, 2.203, -1.128);
+      const START_QUAT = new THREE.Quaternion(
+        -0.043,
+        -0.909,
+        -0.097,
+        0.402,
+      ).normalize();
+
+      const els = {
+        canvas: document.getElementById("scene"),
+        fps: document.getElementById("fps"),
+        frameTime: document.getElementById("frame-time"),
+        activeSplats: document.getElementById("active-splats"),
+        pagesLoaded: document.getElementById("pages-loaded"),
+        lodScale: document.getElementById("lod-scale"),
+        highDpi: document.getElementById("high-dpi"),
+        pageFlash: document.getElementById("page-flash"),
+        pauseFetching: document.getElementById("pause-fetching"),
+        resetCamera: document.getElementById("reset-camera"),
+        captureRow: document.getElementById("capture-row"),
+        assetUrl: document.getElementById("asset-url"),
+        loading: document.getElementById("loading"),
+        error: document.getElementById("error"),
+      };
+
+      els.assetUrl.textContent = COIT_RAD_URL;
+
+      const renderer = new THREE.WebGLRenderer({
+        canvas: els.canvas,
+        antialias: false,
+      });
+      renderer.autoClear = false;
+
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color("#c9fbff");
+
+      const camera = new THREE.PerspectiveCamera(65, 1, 0.01, 2000);
+      camera.rotation.order = "YXZ";
+      scene.add(camera);
+
+      function isMobile() {
+        return /Android|iPhone|iPad|iPod|Mobi|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        );
+      }
+
+      function isIos() {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent);
+      }
+
+      function getMaxPages() {
+        let maxLayers = 256;
+        try {
+          const gl = renderer.getContext();
+          const reported = gl.getParameter(gl.MAX_ARRAY_TEXTURE_LAYERS);
+          if (Number.isFinite(reported) && reported > 0) {
+            maxLayers = reported;
+          }
+        } catch (error) {
+          console.warn("Could not read MAX_ARRAY_TEXTURE_LAYERS.", error);
+        }
+
+        if (isIos()) return Math.min(maxLayers, 64);
+        if (isMobile()) return Math.min(maxLayers, 96);
+        return Math.min(maxLayers, 1024);
+      }
+
+      const maxPages = getMaxPages();
+      const maxPagedSplats = maxPages * PAGE_SIZE;
+      els.fps.textContent = "0.0";
+      els.frameTime.textContent = "0.0 ms";
+      els.pagesLoaded.textContent = `0 / ${maxPages} (0%)`;
+
+      let needsRenderUntil = performance.now() + 3000;
+
+      const spark = new SparkRenderer({
+        renderer,
+        pagedExtSplats: true,
+        maxPagedSplats,
+        lodSplatScale: Number(els.lodScale.value),
+        coneFov0: 70,
+        coneFov: 120,
+        coneFoveate: 0.4,
+        behindFoveate: 0.2,
+        onDirty: () => {
+          needsRenderUntil = performance.now() + 3000;
+        },
+      });
+      scene.add(spark);
+
+      const pageTimes = new dyno.DynoUniform({
+        type: "vec4",
+        count: Math.ceil(maxPages / 4),
+        value: new Float32Array(Math.ceil(maxPages / 4) * 4),
+      });
+      const dynoTime = dyno.dynoFloat(0);
+      const showPageFlash = dyno.dynoBool(true);
+
+      function applyPageFlash(page, rgb) {
+        return new dyno.Dyno({
+          inTypes: {
+            page: "int",
+            pageTimes: "vec4",
+            dynoTime: "float",
+            enabled: "bool",
+            rgb: "vec3",
+          },
+          outTypes: { rgb: "vec3" },
+          inputs: {
+            page,
+            pageTimes,
+            dynoTime,
+            enabled: showPageFlash,
+            rgb,
+          },
+          statements: ({ inputs, outputs }) => dyno.unindentLines(`
+            ${outputs.rgb} = ${inputs.rgb};
+            if (${inputs.enabled}) {
+              int arrayIndex = ${inputs.page} >> 2;
+              int element = ${inputs.page} & 3;
+              float pageTime = ${inputs.pageTimes}[arrayIndex][element];
+              if (pageTime > 0.0) {
+                float delta = ${inputs.dynoTime} - pageTime;
+                if (delta > 0.0) {
+                  float flash = exp(-max(delta, 0.0) * 4.0);
+                  ${outputs.rgb} = mix(${outputs.rgb}, vec3(0.45, 1.0, 0.45), flash);
+                }
+              }
+            }
+          `),
+        });
+      }
+
+      const splats = new SplatMesh({
+        url: COIT_RAD_URL,
+        paged: true,
+        onLoad: () => {
+          needsRenderUntil = performance.now() + 3000;
+        },
+      });
+      splats.scale.setScalar(10);
+      splats.worldModifier = dyno.dynoBlock(
+        { gsplat: dyno.Gsplat },
+        { gsplat: dyno.Gsplat },
+        ({ gsplat }) => {
+          const { index, rgb } = dyno.splitGsplat(gsplat).outputs;
+          const page = dyno.shr(index, dyno.dynoConst("int", 16));
+          const flashedRgb = applyPageFlash(page, rgb).outputs.rgb;
+          return {
+            gsplat: dyno.combineGsplat({
+              gsplat,
+              rgb: flashedRgb,
+            }),
+          };
+        },
+      );
+      splats.updateGenerator();
+      scene.add(splats);
+
+      const worldUp = new THREE.Vector3(0, 1, 0);
+      const localRight = new THREE.Vector3(1, 0, 0);
+      const yawDelta = new THREE.Quaternion();
+      const pitchDelta = new THREE.Quaternion();
+      const velocity = new THREE.Vector3();
+      const keys = new Set();
+      const pointer = {
+        active: false,
+        id: null,
+        x: 0,
+        y: 0,
+      };
+
+      function resetCamera() {
+        camera.position.copy(START_POS);
+        camera.quaternion.copy(START_QUAT);
+        spark.lodDirty = true;
+        needsRenderUntil = performance.now() + 3000;
+      }
+
+      resetCamera();
+
+      function updateCameraFromPointer(dx, dy) {
+        const sensitivity = 0.0022;
+        yawDelta.setFromAxisAngle(worldUp, -dx * sensitivity);
+        pitchDelta.setFromAxisAngle(localRight, -dy * sensitivity);
+        camera.quaternion.premultiply(yawDelta);
+        camera.quaternion.multiply(pitchDelta).normalize();
+        spark.lodDirty = true;
+        needsRenderUntil = performance.now() + 3000;
+      }
+
+      els.canvas.addEventListener("pointerdown", (event) => {
+        pointer.active = true;
+        pointer.id = event.pointerId;
+        pointer.x = event.clientX;
+        pointer.y = event.clientY;
+        els.canvas.setPointerCapture(event.pointerId);
+        els.canvas.focus();
+      });
+
+      els.canvas.addEventListener("pointermove", (event) => {
+        if (!pointer.active || pointer.id !== event.pointerId) return;
+        const dx = event.clientX - pointer.x;
+        const dy = event.clientY - pointer.y;
+        pointer.x = event.clientX;
+        pointer.y = event.clientY;
+        updateCameraFromPointer(dx, dy);
+      });
+
+      function releasePointer(event) {
+        if (pointer.id !== event.pointerId) return;
+        pointer.active = false;
+        pointer.id = null;
+      }
+
+      els.canvas.addEventListener("pointerup", releasePointer);
+      els.canvas.addEventListener("pointercancel", releasePointer);
+
+      window.addEventListener("keydown", (event) => {
+        keys.add(event.code);
+      });
+
+      window.addEventListener("keyup", (event) => {
+        keys.delete(event.code);
+      });
+
+      function updateMovement(dt) {
+        velocity.set(0, 0, 0);
+        if (keys.has("KeyW")) velocity.z -= 1;
+        if (keys.has("KeyS")) velocity.z += 1;
+        if (keys.has("KeyA")) velocity.x -= 1;
+        if (keys.has("KeyD")) velocity.x += 1;
+        if (keys.has("KeyQ")) velocity.y -= 1;
+        if (keys.has("KeyE")) velocity.y += 1;
+
+        if (velocity.lengthSq() === 0) return;
+
+        velocity.normalize();
+        const speed = keys.has("ShiftLeft") || keys.has("ShiftRight") ? 4 : 1.2;
+        velocity.multiplyScalar(speed * dt);
+        velocity.applyQuaternion(camera.quaternion);
+        camera.position.add(velocity);
+        spark.lodDirty = true;
+        needsRenderUntil = performance.now() + 3000;
+      }
+
+      function resize() {
+        const width = els.canvas.clientWidth;
+        const height = els.canvas.clientHeight;
+        const ratio = els.highDpi.checked ? window.devicePixelRatio : 1;
+        renderer.setPixelRatio(ratio);
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.fov =
+          height < width
+            ? 65
+            : (2 *
+                180 *
+                Math.atan(Math.tan((0.5 * 65 * Math.PI) / 180) / camera.aspect)) /
+              Math.PI;
+        camera.updateProjectionMatrix();
+        spark.lodDirty = true;
+        needsRenderUntil = performance.now() + 3000;
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+
+      els.lodScale.addEventListener("change", () => {
+        spark.lodSplatScale = Number(els.lodScale.value);
+        spark.lodDirty = true;
+        needsRenderUntil = performance.now() + 3000;
+      });
+
+      els.highDpi.addEventListener("change", resize);
+
+      els.pageFlash.addEventListener("change", () => {
+        showPageFlash.value = els.pageFlash.checked;
+        splats.updateVersion();
+        needsRenderUntil = performance.now() + 3000;
+      });
+
+      els.pauseFetching.addEventListener("change", () => {
+        spark.enableLodFetching = !els.pauseFetching.checked;
+        spark.lodDirty = true;
+        needsRenderUntil = performance.now() + 3000;
+      });
+
+      els.resetCamera.addEventListener("click", resetCamera);
+
+      els.captureRow.addEventListener("click", () => {
+        const row = collectMetrics();
+        console.table([row]);
+      });
+
+      function countLoadedPages() {
+        let loaded = 0;
+        if (!spark.pager?.pageToSplatsChunk) return loaded;
+
+        const now = performance.now() / 1000;
+        for (let i = 0; i < maxPages; i += 1) {
+          const chunk = spark.pager.pageToSplatsChunk[i];
+          if (chunk) {
+            loaded += 1;
+            pageTimes.value[i] = chunk.time / 1000 || now;
+          }
+        }
+        return loaded;
+      }
+
+      function formatNumber(value) {
+        return new Intl.NumberFormat("en-US").format(value || 0);
+      }
+
+      function collectMetrics() {
+        const loaded = countLoadedPages();
+        const activeSplats = spark.display?.numSplats ?? 0;
+        return {
+          lodSplatScale: spark.lodSplatScale,
+          fps: Number(currentFps.toFixed(1)),
+          frameMs: Number(currentFrameMs.toFixed(1)),
+          activeSplats,
+          loadedPages: loaded,
+          maxPages,
+          loadedPercent: Number(((loaded / maxPages) * 100).toFixed(1)),
+          url: COIT_RAD_URL,
+        };
+      }
+
+      let lastTime = performance.now();
+      let currentFps = 0;
+      let currentFrameMs = 0;
+      let hudTime = 0;
+
+      renderer.setAnimationLoop(() => {
+        const now = performance.now();
+        const dt = Math.min(0.1, (now - lastTime) / 1000);
+        lastTime = now;
+        currentFrameMs = dt * 1000;
+        currentFps = currentFrameMs > 0 ? 1000 / currentFrameMs : 0;
+
+        updateMovement(dt);
+        dynoTime.value = now / 1000;
+        const loadedPages = countLoadedPages();
+
+        if (spark.pager) {
+          spark.enableLodFetching = !els.pauseFetching.checked;
+        }
+
+        if (now < needsRenderUntil || keys.size > 0 || pointer.active) {
+          splats.updateVersion();
+          renderer.clear();
+          renderer.render(scene, camera);
+        }
+
+        const activeSplats = spark.display?.numSplats ?? 0;
+        if (activeSplats > 0) {
+          els.loading.hidden = true;
+        }
+
+        if (now - hudTime > 250) {
+          hudTime = now;
+          els.fps.textContent = currentFps.toFixed(1);
+          els.frameTime.textContent = `${currentFrameMs.toFixed(1)} ms`;
+          els.activeSplats.textContent = formatNumber(activeSplats);
+          els.pagesLoaded.textContent =
+            `${loadedPages} / ${maxPages} (${((loadedPages / maxPages) * 100).toFixed(0)}%)`;
+        }
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "file": "tile_0.glb",
+    "bytes": 397300,
+    "pointCount": 22178,
+    "mode": 0,
+    "attributes": {
+      "POSITION": 0,
+      "KHR_gaussian_splatting:ROTATION": 3,
+      "COLOR_0": 1,
+      "KHR_gaussian_splatting:SCALE": 2
+    },
+    "primitiveExtensions": {
+      "KHR_gaussian_splatting": {
+        "extensions": {
+          "KHR_gaussian_splatting_compression_spz_2": {
+            "bufferView": 0
+          }
+        }
+      }
+    }
+  },
+  {
+    "file": "ts_0/tile_1.glb",
+    "bytes": 1860776,
+    "pointCount": 103522,
+    "mode": 0,
+    "attributes": {
+      "POSITION": 0,
+      "KHR_gaussian_splatting:ROTATION": 3,
+      "COLOR_0": 1,
+      "KHR_gaussian_splatting:SCALE": 2
+    },
+    "primitiveExtensions": {
+      "KHR_gaussian_splatting": {
+        "extensions": {
+          "KHR_gaussian_splatting_compression_spz_2": {
+            "bufferView": 0
+          }
+        }
+      }
+    }
+  },
+  {
+    "file": "ts_0/ts_1/ts_2/tile_2.glb",
+    "bytes": 601152,
+    "pointCount": 33108,
+    "mode": 0,
+    "attributes": {
+      "POSITION": 0,
+      "KHR_gaussian_splatting:ROTATION": 3,
+      "COLOR_0": 1,
+      "KHR_gaussian_splatting:SCALE": 2
+    },
+    "primitiveExtensions": {
+      "KHR_gaussian_splatting": {
+        "extensions": {
+          "KHR_gaussian_splatting_compression_spz_2": {
+            "bufferView": 0
+          }
+        }
+      }
+    }
+  }
+]

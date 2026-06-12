@@ -1,0 +1,2482 @@
+{
+  "version": "0.1",
+  "payloadStatus": "generated-raw",
+  "attributeSchemas": {
+    "gaussian-basic-v0": {
+      "attributes": [
+        {
+          "name": "position",
+          "type": "float32",
+          "components": 3
+        },
+        {
+          "name": "scale",
+          "type": "float32",
+          "components": 3
+        },
+        {
+          "name": "rotation",
+          "type": "float32",
+          "components": 4
+        },
+        {
+          "name": "opacity",
+          "type": "float32",
+          "components": 1
+        },
+        {
+          "name": "color",
+          "type": "float32",
+          "components": 3
+        }
+      ],
+      "bytesPerSplat": 56
+    }
+  },
+  "chunks": [
+    {
+      "id": "chunk.root.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 0,
+      "byteLength": 2800000,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root",
+      "layer": "root.base",
+      "level": 0,
+      "splatCount": 50000,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.908927,
+          -7.263915
+        ],
+        "max": [
+          61.281841,
+          66.40358,
+          4.36763
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 100,
+        "decodeCost": 1.5,
+        "gpuUploadBytes": 2800000
+      }
+    },
+    {
+      "id": "chunk.root.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 2800000,
+      "byteLength": 8400000,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root",
+      "layer": "root.r1",
+      "level": 1,
+      "splatCount": 150000,
+      "dependencies": [
+        "chunk.root.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.908927,
+          -7.263915
+        ],
+        "max": [
+          61.281841,
+          66.40358,
+          4.36763
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 75,
+        "decodeCost": 3.3,
+        "gpuUploadBytes": 8400000
+      }
+    },
+    {
+      "id": "chunk.root_0.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 11200000,
+      "byteLength": 499128,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0",
+      "layer": "root_0.base",
+      "level": 0,
+      "splatCount": 8913,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.041966,
+          -5.908927,
+          -7.225945
+        ],
+        "max": [
+          29.10495,
+          26.912308,
+          -1.448155
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.089,
+        "gpuUploadBytes": 499128
+      }
+    },
+    {
+      "id": "chunk.root_0.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 11699128,
+      "byteLength": 1497216,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0",
+      "layer": "root_0.r1",
+      "level": 1,
+      "splatCount": 26736,
+      "dependencies": [
+        "chunk.root_0.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.041966,
+          -5.908927,
+          -7.225945
+        ],
+        "max": [
+          29.10495,
+          26.912308,
+          -1.448155
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 60,
+        "decodeCost": 2.067,
+        "gpuUploadBytes": 1497216
+      }
+    },
+    {
+      "id": "chunk.root_0_0.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 13196344,
+      "byteLength": 168,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_0",
+      "layer": "root_0_0.base",
+      "level": 0,
+      "splatCount": 3,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -0.485793,
+          1.847385,
+          -6.445373
+        ],
+        "max": [
+          9.259438,
+          6.608487,
+          -4.394462
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 168
+      }
+    },
+    {
+      "id": "chunk.root_0_1.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 13196512,
+      "byteLength": 168,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_1",
+      "layer": "root_0_1.base",
+      "level": 0,
+      "splatCount": 3,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          15.126711,
+          3.545547,
+          -7.225945
+        ],
+        "max": [
+          29.015743,
+          10.010077,
+          -4.51216
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 168
+      }
+    },
+    {
+      "id": "chunk.root_0_4.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 13196680,
+      "byteLength": 156912,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_4",
+      "layer": "root_0_4.base",
+      "level": 0,
+      "splatCount": 2802,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.041966,
+          -5.908927,
+          -4.249773
+        ],
+        "max": [
+          13.031426,
+          10.500173,
+          -1.448209
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.028,
+        "gpuUploadBytes": 156912
+      }
+    },
+    {
+      "id": "chunk.root_0_4.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 13353592,
+      "byteLength": 470624,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_4",
+      "layer": "root_0_4.r1",
+      "level": 1,
+      "splatCount": 8404,
+      "dependencies": [
+        "chunk.root_0_4.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.041966,
+          -5.908927,
+          -4.249773
+        ],
+        "max": [
+          13.031426,
+          10.500173,
+          -1.448209
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 45,
+        "decodeCost": 1.884,
+        "gpuUploadBytes": 470624
+      }
+    },
+    {
+      "id": "chunk.root_0_5.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 13824216,
+      "byteLength": 237552,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_5",
+      "layer": "root_0_5.base",
+      "level": 0,
+      "splatCount": 4242,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.041166,
+          -5.262622,
+          -4.2612
+        ],
+        "max": [
+          29.10495,
+          10.501513,
+          -1.448294
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.042,
+        "gpuUploadBytes": 237552
+      }
+    },
+    {
+      "id": "chunk.root_0_5.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 14061768,
+      "byteLength": 712488,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_5",
+      "layer": "root_0_5.r1",
+      "level": 1,
+      "splatCount": 12723,
+      "dependencies": [
+        "chunk.root_0_5.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.041166,
+          -5.262622,
+          -4.2612
+        ],
+        "max": [
+          29.10495,
+          10.501513,
+          -1.448294
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 45,
+        "decodeCost": 1.927,
+        "gpuUploadBytes": 712488
+      }
+    },
+    {
+      "id": "chunk.root_0_6.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 14774256,
+      "byteLength": 257208,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_6",
+      "layer": "root_0_6.base",
+      "level": 0,
+      "splatCount": 4593,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          1.53906,
+          10.502084,
+          -4.318274
+        ],
+        "max": [
+          13.031481,
+          16.825081,
+          -1.448388
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.046,
+        "gpuUploadBytes": 257208
+      }
+    },
+    {
+      "id": "chunk.root_0_7.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 15031464,
+      "byteLength": 161224,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_0_7",
+      "layer": "root_0_7.base",
+      "level": 0,
+      "splatCount": 2879,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.038987,
+          10.502316,
+          -4.291452
+        ],
+        "max": [
+          29.104633,
+          26.912308,
+          -1.448155
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.029,
+        "gpuUploadBytes": 161224
+      }
+    },
+    {
+      "id": "chunk.root_1.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 15192688,
+      "byteLength": 295288,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_1",
+      "layer": "root_1.base",
+      "level": 0,
+      "splatCount": 5273,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.110619,
+          -4.954838,
+          -7.263915
+        ],
+        "max": [
+          60.996769,
+          28.309191,
+          -1.448337
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.053,
+        "gpuUploadBytes": 295288
+      }
+    },
+    {
+      "id": "chunk.root_1.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 15487976,
+      "byteLength": 885696,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_1",
+      "layer": "root_1.r1",
+      "level": 1,
+      "splatCount": 15816,
+      "dependencies": [
+        "chunk.root_1.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.110619,
+          -4.954838,
+          -7.263915
+        ],
+        "max": [
+          60.996769,
+          28.309191,
+          -1.448337
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 60,
+        "decodeCost": 1.958,
+        "gpuUploadBytes": 885696
+      }
+    },
+    {
+      "id": "chunk.root_2.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 16373672,
+      "byteLength": 1400,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_2",
+      "layer": "root_2.base",
+      "level": 0,
+      "splatCount": 25,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.083423,
+          32.970085,
+          -3.185633
+        ],
+        "max": [
+          28.271782,
+          65.037239,
+          -1.474247
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 1400
+      }
+    },
+    {
+      "id": "chunk.root_3.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 16375072,
+      "byteLength": 2072,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_3",
+      "layer": "root_3.base",
+      "level": 0,
+      "splatCount": 37,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          30.182009,
+          33.879765,
+          -3.332682
+        ],
+        "max": [
+          55.550835,
+          39.927864,
+          -1.484284
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 2072
+      }
+    },
+    {
+      "id": "chunk.root_4.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 16377144,
+      "byteLength": 1412376,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4",
+      "layer": "root_4.base",
+      "level": 0,
+      "splatCount": 25221,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.251137,
+          -1.448076
+        ],
+        "max": [
+          29.106668,
+          27.813555,
+          4.331119
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.252,
+        "gpuUploadBytes": 1412376
+      }
+    },
+    {
+      "id": "chunk.root_4.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 17789520,
+      "byteLength": 4237128,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4",
+      "layer": "root_4.r1",
+      "level": 1,
+      "splatCount": 75663,
+      "dependencies": [
+        "chunk.root_4.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.251137,
+          -1.448076
+        ],
+        "max": [
+          29.106668,
+          27.813555,
+          4.331119
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 60,
+        "decodeCost": 2.557,
+        "gpuUploadBytes": 4237128
+      }
+    },
+    {
+      "id": "chunk.root_4_0.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 22026648,
+      "byteLength": 423248,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0",
+      "layer": "root_4_0.base",
+      "level": 0,
+      "splatCount": 7558,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.02529,
+          -1.447913
+        ],
+        "max": [
+          13.017733,
+          11.281002,
+          0.292176
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.076,
+        "gpuUploadBytes": 423248
+      }
+    },
+    {
+      "id": "chunk.root_4_0.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 22449896,
+      "byteLength": 1269688,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0",
+      "layer": "root_4_0.r1",
+      "level": 1,
+      "splatCount": 22673,
+      "dependencies": [
+        "chunk.root_4_0.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.02529,
+          -1.447913
+        ],
+        "max": [
+          13.017733,
+          11.281002,
+          0.292176
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 45,
+        "decodeCost": 2.027,
+        "gpuUploadBytes": 1269688
+      }
+    },
+    {
+      "id": "chunk.root_4_0_0.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 23719584,
+      "byteLength": 121352,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_0",
+      "layer": "root_4_0_0.base",
+      "level": 0,
+      "splatCount": 2167,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -2.993185,
+          -2.693635,
+          -1.447531
+        ],
+        "max": [
+          4.9747,
+          3.127638,
+          -0.578062
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.022,
+        "gpuUploadBytes": 121352
+      }
+    },
+    {
+      "id": "chunk.root_4_0_1.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 23840936,
+      "byteLength": 31360,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_1",
+      "layer": "root_4_0_1.base",
+      "level": 0,
+      "splatCount": 560,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.977207,
+          -4.215014,
+          -1.446059
+        ],
+        "max": [
+          12.962043,
+          3.11112,
+          -0.58235
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.006,
+        "gpuUploadBytes": 31360
+      }
+    },
+    {
+      "id": "chunk.root_4_0_2.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 23872296,
+      "byteLength": 179704,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_2",
+      "layer": "root_4_0_2.base",
+      "level": 0,
+      "splatCount": 3209,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          0.039288,
+          3.128639,
+          -1.447913
+        ],
+        "max": [
+          4.969873,
+          11.280653,
+          -0.578858
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.032,
+        "gpuUploadBytes": 179704
+      }
+    },
+    {
+      "id": "chunk.root_4_0_3.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 24052000,
+      "byteLength": 93576,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_3",
+      "layer": "root_4_0_3.base",
+      "level": 0,
+      "splatCount": 1671,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.97927,
+          3.146456,
+          -1.44754
+        ],
+        "max": [
+          10.405531,
+          7.13679,
+          -0.578092
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.017,
+        "gpuUploadBytes": 93576
+      }
+    },
+    {
+      "id": "chunk.root_4_0_4.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 24145576,
+      "byteLength": 422352,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_4",
+      "layer": "root_4_0_4.base",
+      "level": 0,
+      "splatCount": 7542,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -2.733602,
+          -0.577802
+        ],
+        "max": [
+          4.973944,
+          3.127202,
+          0.292176
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.075,
+        "gpuUploadBytes": 422352
+      }
+    },
+    {
+      "id": "chunk.root_4_0_5.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 24567928,
+      "byteLength": 357168,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_5",
+      "layer": "root_4_0_5.base",
+      "level": 0,
+      "splatCount": 6378,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.975375,
+          -5.02529,
+          -0.57243
+        ],
+        "max": [
+          13.014082,
+          3.126112,
+          0.292089
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.064,
+        "gpuUploadBytes": 357168
+      }
+    },
+    {
+      "id": "chunk.root_4_0_6.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 24925096,
+      "byteLength": 110544,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_6",
+      "layer": "root_4_0_6.base",
+      "level": 0,
+      "splatCount": 1974,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          0.01447,
+          3.128449,
+          -0.57782
+        ],
+        "max": [
+          4.971741,
+          11.279592,
+          0.231698
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.02,
+        "gpuUploadBytes": 110544
+      }
+    },
+    {
+      "id": "chunk.root_4_0_7.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 25035640,
+      "byteLength": 376880,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_0_7",
+      "layer": "root_4_0_7.base",
+      "level": 0,
+      "splatCount": 6730,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.981925,
+          3.129824,
+          -0.577783
+        ],
+        "max": [
+          13.017733,
+          11.281002,
+          0.220017
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.067,
+        "gpuUploadBytes": 376880
+      }
+    },
+    {
+      "id": "chunk.root_4_1.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 25412520,
+      "byteLength": 693392,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1",
+      "layer": "root_4_1.base",
+      "level": 0,
+      "splatCount": 12382,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.020227,
+          -5.251137,
+          -1.448076
+        ],
+        "max": [
+          29.106668,
+          11.279408,
+          1.431536
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.124,
+        "gpuUploadBytes": 693392
+      }
+    },
+    {
+      "id": "chunk.root_4_1.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 26105912,
+      "byteLength": 2080008,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1",
+      "layer": "root_4_1.r1",
+      "level": 1,
+      "splatCount": 37143,
+      "dependencies": [
+        "chunk.root_4_1.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.020227,
+          -5.251137,
+          -1.448076
+        ],
+        "max": [
+          29.106668,
+          11.279408,
+          1.431536
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 45,
+        "decodeCost": 2.171,
+        "gpuUploadBytes": 2080008
+      }
+    },
+    {
+      "id": "chunk.root_4_1_0.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 28185920,
+      "byteLength": 247072,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_0",
+      "layer": "root_4_1_0.base",
+      "level": 0,
+      "splatCount": 4412,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.024359,
+          -5.214252,
+          -1.446488
+        ],
+        "max": [
+          21.055567,
+          2.831989,
+          -0.008528
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.044,
+        "gpuUploadBytes": 247072
+      }
+    },
+    {
+      "id": "chunk.root_4_1_1.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 28432992,
+      "byteLength": 131712,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_1",
+      "layer": "root_4_1_1.base",
+      "level": 0,
+      "splatCount": 2352,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.065742,
+          -5.24661,
+          -1.448025
+        ],
+        "max": [
+          29.105982,
+          3.01197,
+          -0.008542
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.024,
+        "gpuUploadBytes": 131712
+      }
+    },
+    {
+      "id": "chunk.root_4_1_1.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 28564704,
+      "byteLength": 395136,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_1",
+      "layer": "root_4_1_1.r1",
+      "level": 1,
+      "splatCount": 7056,
+      "dependencies": [
+        "chunk.root_4_1_1.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.065742,
+          -5.24661,
+          -1.448025
+        ],
+        "max": [
+          29.105982,
+          3.01197,
+          -0.008542
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 30,
+        "decodeCost": 1.871,
+        "gpuUploadBytes": 395136
+      }
+    },
+    {
+      "id": "chunk.root_4_1_2.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 28959840,
+      "byteLength": 148344,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_2",
+      "layer": "root_4_1_2.base",
+      "level": 0,
+      "splatCount": 2649,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.027271,
+          3.052212,
+          -1.448076
+        ],
+        "max": [
+          21.063255,
+          11.277502,
+          -0.008271
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.026,
+        "gpuUploadBytes": 148344
+      }
+    },
+    {
+      "id": "chunk.root_4_1_2.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 29108184,
+      "byteLength": 445032,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_2",
+      "layer": "root_4_1_2.r1",
+      "level": 1,
+      "splatCount": 7947,
+      "dependencies": [
+        "chunk.root_4_1_2.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.027271,
+          3.052212,
+          -1.448076
+        ],
+        "max": [
+          21.063255,
+          11.277502,
+          -0.008271
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 30,
+        "decodeCost": 1.879,
+        "gpuUploadBytes": 445032
+      }
+    },
+    {
+      "id": "chunk.root_4_1_3.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 29553216,
+      "byteLength": 262416,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_3",
+      "layer": "root_4_1_3.base",
+      "level": 0,
+      "splatCount": 4686,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.063498,
+          3.019735,
+          -1.447935
+        ],
+        "max": [
+          29.106668,
+          11.275143,
+          -0.008273
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.047,
+        "gpuUploadBytes": 262416
+      }
+    },
+    {
+      "id": "chunk.root_4_1_4.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 29815632,
+      "byteLength": 244160,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_4",
+      "layer": "root_4_1_4.base",
+      "level": 0,
+      "splatCount": 4360,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.023258,
+          -5.130607,
+          -0.00807
+        ],
+        "max": [
+          21.058235,
+          3.013312,
+          0.35611
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.044,
+        "gpuUploadBytes": 244160
+      }
+    },
+    {
+      "id": "chunk.root_4_1_5.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 30059792,
+      "byteLength": 185808,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_5",
+      "layer": "root_4_1_5.base",
+      "level": 0,
+      "splatCount": 3318,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.069965,
+          -5.251137,
+          -0.007998
+        ],
+        "max": [
+          29.102558,
+          3.012045,
+          0.288206
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.033,
+        "gpuUploadBytes": 185808
+      }
+    },
+    {
+      "id": "chunk.root_4_1_6.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 30245600,
+      "byteLength": 179536,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_6",
+      "layer": "root_4_1_6.base",
+      "level": 0,
+      "splatCount": 3206,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.020227,
+          3.014938,
+          -0.008267
+        ],
+        "max": [
+          21.062147,
+          11.279408,
+          0.222585
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.032,
+        "gpuUploadBytes": 179536
+      }
+    },
+    {
+      "id": "chunk.root_4_1_7.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 30425136,
+      "byteLength": 133560,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_7",
+      "layer": "root_4_1_7.base",
+      "level": 0,
+      "splatCount": 2385,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.064913,
+          3.016478,
+          -0.008093
+        ],
+        "max": [
+          29.102421,
+          11.268451,
+          1.431536
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.024,
+        "gpuUploadBytes": 133560
+      }
+    },
+    {
+      "id": "chunk.root_4_1_7.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 30558696,
+      "byteLength": 400624,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_1_7",
+      "layer": "root_4_1_7.r1",
+      "level": 1,
+      "splatCount": 7154,
+      "dependencies": [
+        "chunk.root_4_1_7.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.064913,
+          3.016478,
+          -0.008093
+        ],
+        "max": [
+          29.102421,
+          11.268451,
+          1.431536
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 30,
+        "decodeCost": 1.872,
+        "gpuUploadBytes": 400624
+      }
+    },
+    {
+      "id": "chunk.root_4_2.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 30959320,
+      "byteLength": 195328,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_2",
+      "layer": "root_4_2.base",
+      "level": 0,
+      "splatCount": 3488,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          1.445971,
+          11.281349,
+          -1.448031
+        ],
+        "max": [
+          13.014565,
+          27.493145,
+          0.265729
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.035,
+        "gpuUploadBytes": 195328
+      }
+    },
+    {
+      "id": "chunk.root_4_2.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 31154648,
+      "byteLength": 585928,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_2",
+      "layer": "root_4_2.r1",
+      "level": 1,
+      "splatCount": 10463,
+      "dependencies": [
+        "chunk.root_4_2.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          1.445971,
+          11.281349,
+          -1.448031
+        ],
+        "max": [
+          13.014565,
+          27.493145,
+          0.265729
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 45,
+        "decodeCost": 1.905,
+        "gpuUploadBytes": 585928
+      }
+    },
+    {
+      "id": "chunk.root_4_3.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 31740576,
+      "byteLength": 379008,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_3",
+      "layer": "root_4_3.base",
+      "level": 0,
+      "splatCount": 6768,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.019749,
+          11.284192,
+          -1.447364
+        ],
+        "max": [
+          28.230093,
+          27.813555,
+          1.163674
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.068,
+        "gpuUploadBytes": 379008
+      }
+    },
+    {
+      "id": "chunk.root_4_5.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 32119584,
+      "byteLength": 22008,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_5",
+      "layer": "root_4_5.base",
+      "level": 0,
+      "splatCount": 393,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          26.891424,
+          0.548135,
+          1.443865
+        ],
+        "max": [
+          29.096539,
+          11.277803,
+          4.325445
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.004,
+        "gpuUploadBytes": 22008
+      }
+    },
+    {
+      "id": "chunk.root_4_7.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 32141592,
+      "byteLength": 896,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_4_7",
+      "layer": "root_4_7.base",
+      "level": 0,
+      "splatCount": 16,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          26.562313,
+          11.310703,
+          1.58212
+        ],
+        "max": [
+          28.825443,
+          21.766233,
+          4.331119
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 896
+      }
+    },
+    {
+      "id": "chunk.root_5.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 32142488,
+      "byteLength": 591024,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5",
+      "layer": "root_5.base",
+      "level": 0,
+      "splatCount": 10554,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.221348,
+          -1.448042
+        ],
+        "max": [
+          61.281841,
+          28.15934,
+          4.36763
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.106,
+        "gpuUploadBytes": 591024
+      }
+    },
+    {
+      "id": "chunk.root_5.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 32733512,
+      "byteLength": 1772904,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5",
+      "layer": "root_5.r1",
+      "level": 1,
+      "splatCount": 31659,
+      "dependencies": [
+        "chunk.root_5.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.221348,
+          -1.448042
+        ],
+        "max": [
+          61.281841,
+          28.15934,
+          4.36763
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 60,
+        "decodeCost": 2.117,
+        "gpuUploadBytes": 1772904
+      }
+    },
+    {
+      "id": "chunk.root_5_0.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 34506416,
+      "byteLength": 561232,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0",
+      "layer": "root_5_0.base",
+      "level": 0,
+      "splatCount": 10022,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.221348,
+          -1.448042
+        ],
+        "max": [
+          45.168575,
+          12.463378,
+          1.459245
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.1,
+        "gpuUploadBytes": 561232
+      }
+    },
+    {
+      "id": "chunk.root_5_0.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 35067648,
+      "byteLength": 1683584,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0",
+      "layer": "root_5_0.r1",
+      "level": 1,
+      "splatCount": 30064,
+      "dependencies": [
+        "chunk.root_5_0.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.221348,
+          -1.448042
+        ],
+        "max": [
+          45.168575,
+          12.463378,
+          1.459245
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 45,
+        "decodeCost": 2.101,
+        "gpuUploadBytes": 1683584
+      }
+    },
+    {
+      "id": "chunk.root_5_0_0.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 36751232,
+      "byteLength": 128968,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_0",
+      "layer": "root_5_0_0.base",
+      "level": 0,
+      "splatCount": 2303,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.070823,
+          -1.447667
+        ],
+        "max": [
+          37.137798,
+          4.477943,
+          0.00557
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.023,
+        "gpuUploadBytes": 128968
+      }
+    },
+    {
+      "id": "chunk.root_5_0_0.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 36880200,
+      "byteLength": 386904,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_0",
+      "layer": "root_5_0_0.r1",
+      "level": 1,
+      "splatCount": 6909,
+      "dependencies": [
+        "chunk.root_5_0_0.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.070823,
+          -1.447667
+        ],
+        "max": [
+          37.137798,
+          4.477943,
+          0.00557
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 30,
+        "decodeCost": 1.869,
+        "gpuUploadBytes": 386904
+      }
+    },
+    {
+      "id": "chunk.root_5_0_1.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 37267104,
+      "byteLength": 314048,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_1",
+      "layer": "root_5_0_1.base",
+      "level": 0,
+      "splatCount": 5608,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.138626,
+          -1.101462,
+          -1.447949
+        ],
+        "max": [
+          44.956577,
+          4.620721,
+          0.005452
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.056,
+        "gpuUploadBytes": 314048
+      }
+    },
+    {
+      "id": "chunk.root_5_0_2.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 37581152,
+      "byteLength": 104888,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_2",
+      "layer": "root_5_0_2.base",
+      "level": 0,
+      "splatCount": 1873,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108671,
+          8.678745,
+          -1.445885
+        ],
+        "max": [
+          37.135429,
+          12.463378,
+          0.00482
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.019,
+        "gpuUploadBytes": 104888
+      }
+    },
+    {
+      "id": "chunk.root_5_0_3.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 37686040,
+      "byteLength": 373912,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_3",
+      "layer": "root_5_0_3.base",
+      "level": 0,
+      "splatCount": 6677,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.139175,
+          4.621222,
+          -1.448042
+        ],
+        "max": [
+          43.837341,
+          12.462806,
+          0.005524
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.067,
+        "gpuUploadBytes": 373912
+      }
+    },
+    {
+      "id": "chunk.root_5_0_4.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 38059952,
+      "byteLength": 167160,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_4",
+      "layer": "root_5_0_4.base",
+      "level": 0,
+      "splatCount": 2985,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.110168,
+          -3.221348,
+          0.005884
+        ],
+        "max": [
+          37.135448,
+          4.619785,
+          1.455624
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.03,
+        "gpuUploadBytes": 167160
+      }
+    },
+    {
+      "id": "chunk.root_5_0_5.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 38227112,
+      "byteLength": 174608,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_5",
+      "layer": "root_5_0_5.base",
+      "level": 0,
+      "splatCount": 3118,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.141518,
+          0.823948,
+          0.00667
+        ],
+        "max": [
+          45.168575,
+          4.614866,
+          0.359224
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.031,
+        "gpuUploadBytes": 174608
+      }
+    },
+    {
+      "id": "chunk.root_5_0_6.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 38401720,
+      "byteLength": 44688,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_6",
+      "layer": "root_5_0_6.base",
+      "level": 0,
+      "splatCount": 798,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.123705,
+          4.621117,
+          0.016865
+        ],
+        "max": [
+          37.13644,
+          11.678381,
+          1.459245
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.008,
+        "gpuUploadBytes": 44688
+      }
+    },
+    {
+      "id": "chunk.root_5_0_7.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 38446408,
+      "byteLength": 137424,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_7",
+      "layer": "root_5_0_7.base",
+      "level": 0,
+      "splatCount": 2454,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.14922,
+          4.621053,
+          0.005831
+        ],
+        "max": [
+          43.912041,
+          12.410283,
+          1.458426
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 1.025,
+        "gpuUploadBytes": 137424
+      }
+    },
+    {
+      "id": "chunk.root_5_0_7.r1",
+      "uri": "chunks-0.bin",
+      "byteOffset": 38583832,
+      "byteLength": 412216,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_0_7",
+      "layer": "root_5_0_7.r1",
+      "level": 1,
+      "splatCount": 7361,
+      "dependencies": [
+        "chunk.root_5_0_7.base"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.14922,
+          4.621053,
+          0.005831
+        ],
+        "max": [
+          43.912041,
+          12.410283,
+          1.458426
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 30,
+        "decodeCost": 1.874,
+        "gpuUploadBytes": 412216
+      }
+    },
+    {
+      "id": "chunk.root_5_1.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 38996048,
+      "byteLength": 7896,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_1",
+      "layer": "root_5_1.base",
+      "level": 0,
+      "splatCount": 141,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          45.200405,
+          0.115695,
+          -1.390597
+        ],
+        "max": [
+          61.281841,
+          6.241318,
+          0.215513
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.001,
+        "gpuUploadBytes": 7896
+      }
+    },
+    {
+      "id": "chunk.root_5_2.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 39003944,
+      "byteLength": 7784,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_2",
+      "layer": "root_5_2.base",
+      "level": 0,
+      "splatCount": 139,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.152866,
+          12.469031,
+          -1.446375
+        ],
+        "max": [
+          44.681725,
+          23.904373,
+          1.441219
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.001,
+        "gpuUploadBytes": 7784
+      }
+    },
+    {
+      "id": "chunk.root_5_3.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 39011728,
+      "byteLength": 224,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_3",
+      "layer": "root_5_3.base",
+      "level": 0,
+      "splatCount": 4,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          48.015469,
+          19.557659,
+          -0.661119
+        ],
+        "max": [
+          50.649254,
+          28.15934,
+          0.866494
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 224
+      }
+    },
+    {
+      "id": "chunk.root_5_4.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 39011952,
+      "byteLength": 101864,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_4",
+      "layer": "root_5_4.base",
+      "level": 0,
+      "splatCount": 1819,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.113077,
+          -0.275422,
+          1.460567
+        ],
+        "max": [
+          40.575027,
+          12.450662,
+          4.36763
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.018,
+        "gpuUploadBytes": 101864
+      }
+    },
+    {
+      "id": "chunk.root_5_6.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 39113816,
+      "byteLength": 1344,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_5_6",
+      "layer": "root_5_6.base",
+      "level": 0,
+      "splatCount": 24,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.185974,
+          12.568381,
+          2.212479
+        ],
+        "max": [
+          39.310822,
+          21.287687,
+          4.250579
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 1344
+      }
+    },
+    {
+      "id": "chunk.root_6.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 39115160,
+      "byteLength": 2240,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_6",
+      "layer": "root_6.base",
+      "level": 0,
+      "splatCount": 40,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.068749,
+          34.746937,
+          -1.435105
+        ],
+        "max": [
+          27.864471,
+          66.40358,
+          4.068843
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 2240
+      }
+    },
+    {
+      "id": "chunk.root_7.base",
+      "uri": "chunks-0.bin",
+      "byteOffset": 39117400,
+      "byteLength": 3528,
+      "codec": "raw-gaussian-v0",
+      "attributeSchema": "gaussian-basic-v0",
+      "node": "root_7",
+      "layer": "root_7.base",
+      "level": 0,
+      "splatCount": 63,
+      "dependencies": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          30.591749,
+          33.500961,
+          -1.402474
+        ],
+        "max": [
+          59.635036,
+          57.940704,
+          2.941466
+        ]
+      },
+      "gpuLayout": {
+        "preferredOrder": "importance",
+        "alignment": 16,
+        "interleaved": true
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.001,
+        "gpuUploadBytes": 3528
+      }
+    }
+  ]
+}

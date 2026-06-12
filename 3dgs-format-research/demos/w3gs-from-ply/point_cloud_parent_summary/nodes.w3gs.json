@@ -1,0 +1,3332 @@
+{
+  "version": "0.1",
+  "tree": {
+    "root": "root",
+    "nodeCount": 51,
+    "relationship": "explicit-parent-and-children",
+    "builder": "simple-octree"
+  },
+  "nodes": [
+    {
+      "id": "root",
+      "parent": null,
+      "children": [
+        "root_0",
+        "root_1",
+        "root_2",
+        "root_3",
+        "root_4",
+        "root_5",
+        "root_6",
+        "root_7"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.908927,
+          -7.263915
+        ],
+        "max": [
+          61.281841,
+          66.40358,
+          4.36763
+        ]
+      },
+      "layers": [
+        {
+          "id": "root.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root.base",
+          "splatCount": 1053,
+          "refinementMode": "replacement",
+          "lodRole": "summary",
+          "sourceSplatCount": 200000,
+          "summarySplatCount": 1053,
+          "summaryMethod": "grid-cluster-merge-v0",
+          "approxError": 2.091934,
+          "geometricError": 2.114316,
+          "storageOverhead": 0.005265
+        }
+      ],
+      "lod": {
+        "estimatedError": 2.091934,
+        "approxError": 2.091934,
+        "geometricError": 2.114316,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "summary",
+        "summaryMethod": "grid-cluster-merge-v0",
+        "sourceSplatCount": 200000,
+        "summarySplatCount": 1053,
+        "gridSize": [
+          23,
+          23,
+          23
+        ],
+        "targetRatio": 0.08,
+        "storageOverhead": 0.005265,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 100,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 58968,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_0",
+      "parent": "root",
+      "children": [
+        "root_0_0",
+        "root_0_1",
+        "root_0_4",
+        "root_0_5",
+        "root_0_6",
+        "root_0_7"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.041966,
+          -5.908927,
+          -7.225945
+        ],
+        "max": [
+          29.10495,
+          26.912308,
+          -1.448155
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_0.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_0.base",
+          "splatCount": 451,
+          "refinementMode": "replacement",
+          "lodRole": "summary",
+          "sourceSplatCount": 35649,
+          "summarySplatCount": 451,
+          "summaryMethod": "grid-cluster-merge-v0",
+          "approxError": 1.589349,
+          "geometricError": 1.538138,
+          "storageOverhead": 0.012651
+        }
+      ],
+      "lod": {
+        "estimatedError": 1.589349,
+        "approxError": 1.589349,
+        "geometricError": 1.538138,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "summary",
+        "summaryMethod": "grid-cluster-merge-v0",
+        "sourceSplatCount": 35649,
+        "summarySplatCount": 451,
+        "gridSize": [
+          15,
+          15,
+          15
+        ],
+        "targetRatio": 0.08,
+        "storageOverhead": 0.012651,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 25256,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_0_0",
+      "parent": "root_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -0.485793,
+          1.847385,
+          -6.445373
+        ],
+        "max": [
+          9.259438,
+          6.608487,
+          -4.394462
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_0_0.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_0_0.base",
+          "splatCount": 3,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 3,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.03829,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.03829,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 3,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 168,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_0_1",
+      "parent": "root_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          15.126711,
+          3.545547,
+          -7.225945
+        ],
+        "max": [
+          29.015743,
+          10.010077,
+          -4.51216
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_0_1.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_0_1.base",
+          "splatCount": 3,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 3,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 15.558277,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 15.558277,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 3,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 168,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_0_4",
+      "parent": "root_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.041966,
+          -5.908927,
+          -4.249773
+        ],
+        "max": [
+          13.031426,
+          10.500173,
+          -1.448209
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_0_4.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_0_4.base",
+          "splatCount": 11206,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 11206,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 23.140036,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 23.140036,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 11206,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 627536,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_0_5",
+      "parent": "root_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.041166,
+          -5.262622,
+          -4.2612
+        ],
+        "max": [
+          29.10495,
+          10.501513,
+          -1.448294
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_0_5.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_0_5.base",
+          "splatCount": 16965,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 16965,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 22.681832,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 22.681832,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 16965,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 950040,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_0_6",
+      "parent": "root_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          1.53906,
+          10.502084,
+          -4.318274
+        ],
+        "max": [
+          13.031481,
+          16.825081,
+          -1.448388
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_0_6.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_0_6.base",
+          "splatCount": 4593,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 4593,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 13.427296,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 13.427296,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 4593,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 257208,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_0_7",
+      "parent": "root_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.038987,
+          10.502316,
+          -4.291452
+        ],
+        "max": [
+          29.104633,
+          26.912308,
+          -1.448155
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_0_7.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_0_7.base",
+          "splatCount": 2879,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 2879,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 23.14038,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 23.14038,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 2879,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 161224,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_1",
+      "parent": "root",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.110619,
+          -4.954838,
+          -7.263915
+        ],
+        "max": [
+          60.996769,
+          28.309191,
+          -1.448337
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_1.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_1.base",
+          "splatCount": 21089,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 21089,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 46.443979,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 46.443979,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 21089,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 1180984,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_2",
+      "parent": "root",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.083423,
+          32.970085,
+          -3.185633
+        ],
+        "max": [
+          28.271782,
+          65.037239,
+          -1.474247
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_2.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_2.base",
+          "splatCount": 25,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 25,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 40.203332,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 40.203332,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 25,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 1400,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_3",
+      "parent": "root",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          30.182009,
+          33.879765,
+          -3.332682
+        ],
+        "max": [
+          55.550835,
+          39.927864,
+          -1.484284
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_3.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_3.base",
+          "splatCount": 37,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 37,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 26.145237,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 26.145237,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 37,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 2072,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_4",
+      "parent": "root",
+      "children": [
+        "root_4_0",
+        "root_4_1",
+        "root_4_2",
+        "root_4_3",
+        "root_4_5",
+        "root_4_7"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.251137,
+          -1.448076
+        ],
+        "max": [
+          29.106668,
+          27.813555,
+          4.331119
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4.base",
+          "splatCount": 923,
+          "refinementMode": "replacement",
+          "lodRole": "summary",
+          "sourceSplatCount": 100884,
+          "summarySplatCount": 923,
+          "summaryMethod": "grid-cluster-merge-v0",
+          "approxError": 1.063203,
+          "geometricError": 1.103682,
+          "storageOverhead": 0.009149
+        }
+      ],
+      "lod": {
+        "estimatedError": 1.063203,
+        "approxError": 1.063203,
+        "geometricError": 1.103682,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "summary",
+        "summaryMethod": "grid-cluster-merge-v0",
+        "sourceSplatCount": 100884,
+        "summarySplatCount": 923,
+        "gridSize": [
+          21,
+          21,
+          21
+        ],
+        "targetRatio": 0.08,
+        "storageOverhead": 0.009149,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 51688,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_4_0",
+      "parent": "root_4",
+      "children": [
+        "root_4_0_0",
+        "root_4_0_1",
+        "root_4_0_2",
+        "root_4_0_3",
+        "root_4_0_4",
+        "root_4_0_5",
+        "root_4_0_6",
+        "root_4_0_7"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -5.02529,
+          -1.447913
+        ],
+        "max": [
+          13.017733,
+          11.281002,
+          0.292176
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0.base",
+          "splatCount": 838,
+          "refinementMode": "replacement",
+          "lodRole": "summary",
+          "sourceSplatCount": 30231,
+          "summarySplatCount": 838,
+          "summaryMethod": "grid-cluster-merge-v0",
+          "approxError": 0.700159,
+          "geometricError": 0.817157,
+          "storageOverhead": 0.02772
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.700159,
+        "approxError": 0.700159,
+        "geometricError": 0.817157,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "summary",
+        "summaryMethod": "grid-cluster-merge-v0",
+        "sourceSplatCount": 30231,
+        "summarySplatCount": 838,
+        "gridSize": [
+          14,
+          14,
+          14
+        ],
+        "targetRatio": 0.08,
+        "storageOverhead": 0.02772,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 46928,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_0",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -2.993185,
+          -2.693635,
+          -1.447531
+        ],
+        "max": [
+          4.9747,
+          3.127638,
+          -0.578062
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_0.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_0.base",
+          "splatCount": 2167,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 2167,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 9.906078,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 9.906078,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 2167,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 121352,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_1",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.977207,
+          -4.215014,
+          -1.446059
+        ],
+        "max": [
+          12.962043,
+          3.11112,
+          -0.58235
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_1.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_1.base",
+          "splatCount": 560,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 560,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 10.870871,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 10.870871,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 560,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 31360,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_2",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          0.039288,
+          3.128639,
+          -1.447913
+        ],
+        "max": [
+          4.969873,
+          11.280653,
+          -0.578858
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_2.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_2.base",
+          "splatCount": 3209,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 3209,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 9.566674,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 9.566674,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 3209,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 179704,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_3",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.97927,
+          3.146456,
+          -1.44754
+        ],
+        "max": [
+          10.405531,
+          7.13679,
+          -0.578092
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_3.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_3.base",
+          "splatCount": 1671,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 1671,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 6.791392,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 6.791392,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 1671,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 93576,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_4",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          -3.067545,
+          -2.733602,
+          -0.577802
+        ],
+        "max": [
+          4.973944,
+          3.127202,
+          0.292176
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_4.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_4.base",
+          "splatCount": 7542,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 7542,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 9.988565,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 9.988565,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 7542,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 422352,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_5",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.975375,
+          -5.02529,
+          -0.57243
+        ],
+        "max": [
+          13.014082,
+          3.126112,
+          0.292089
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_5.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_5.base",
+          "splatCount": 6378,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 6378,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.481009,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.481009,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 6378,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 357168,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_6",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          0.01447,
+          3.128449,
+          -0.57782
+        ],
+        "max": [
+          4.971741,
+          11.279592,
+          0.231698
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_6.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_6.base",
+          "splatCount": 1974,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 1974,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 9.574496,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 9.574496,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 1974,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 110544,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_0_7",
+      "parent": "root_4_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.981925,
+          3.129824,
+          -0.577783
+        ],
+        "max": [
+          13.017733,
+          11.281002,
+          0.220017
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_0_7.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_0_7.base",
+          "splatCount": 6730,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 6730,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.473988,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.473988,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 6730,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 376880,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1",
+      "parent": "root_4",
+      "children": [
+        "root_4_1_0",
+        "root_4_1_1",
+        "root_4_1_2",
+        "root_4_1_3",
+        "root_4_1_4",
+        "root_4_1_5",
+        "root_4_1_6",
+        "root_4_1_7"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.020227,
+          -5.251137,
+          -1.448076
+        ],
+        "max": [
+          29.106668,
+          11.279408,
+          1.431536
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1.base",
+          "splatCount": 795,
+          "refinementMode": "replacement",
+          "lodRole": "summary",
+          "sourceSplatCount": 49525,
+          "summarySplatCount": 795,
+          "summaryMethod": "grid-cluster-merge-v0",
+          "approxError": 0.661286,
+          "geometricError": 0.720647,
+          "storageOverhead": 0.016052
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.661286,
+        "approxError": 0.661286,
+        "geometricError": 0.720647,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "summary",
+        "summaryMethod": "grid-cluster-merge-v0",
+        "sourceSplatCount": 49525,
+        "summarySplatCount": 795,
+        "gridSize": [
+          16,
+          16,
+          16
+        ],
+        "targetRatio": 0.08,
+        "storageOverhead": 0.016052,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 44520,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_0",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.024359,
+          -5.214252,
+          -1.446488
+        ],
+        "max": [
+          21.055567,
+          2.831989,
+          -0.008528
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_0.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_0.base",
+          "splatCount": 4412,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 4412,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.459059,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.459059,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 4412,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 247072,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_1",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.065742,
+          -5.24661,
+          -1.448025
+        ],
+        "max": [
+          29.105982,
+          3.01197,
+          -0.008542
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_1.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_1.base",
+          "splatCount": 9408,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 9408,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.61558,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.61558,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 9408,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 526848,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_2",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.027271,
+          3.052212,
+          -1.448076
+        ],
+        "max": [
+          21.063255,
+          11.277502,
+          -0.008271
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_2.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_2.base",
+          "splatCount": 10596,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 10596,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.589024,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.589024,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 10596,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 593376,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_3",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.063498,
+          3.019735,
+          -1.447935
+        ],
+        "max": [
+          29.106668,
+          11.275143,
+          -0.008273
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_3.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_3.base",
+          "splatCount": 4686,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 4686,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.615377,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.615377,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 4686,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 262416,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_4",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.023258,
+          -5.130607,
+          -0.00807
+        ],
+        "max": [
+          21.058235,
+          3.013312,
+          0.35611
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_4.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_4.base",
+          "splatCount": 4360,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 4360,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.446261,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.446261,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 4360,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 244160,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_5",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.069965,
+          -5.251137,
+          -0.007998
+        ],
+        "max": [
+          29.102558,
+          3.012045,
+          0.288206
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_5.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_5.base",
+          "splatCount": 3318,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 3318,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.527813,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.527813,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 3318,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 185808,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_6",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.020227,
+          3.014938,
+          -0.008267
+        ],
+        "max": [
+          21.062147,
+          11.279408,
+          0.222585
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_6.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_6.base",
+          "splatCount": 3206,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 3206,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.533743,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.533743,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 3206,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 179536,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_1_7",
+      "parent": "root_4_1",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          21.064913,
+          3.016478,
+          -0.008093
+        ],
+        "max": [
+          29.102421,
+          11.268451,
+          1.431536
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_1_7.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_1_7.base",
+          "splatCount": 9539,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 9539,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.60901,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.60901,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 9539,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 534184,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_2",
+      "parent": "root_4",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          1.445971,
+          11.281349,
+          -1.448031
+        ],
+        "max": [
+          13.014565,
+          27.493145,
+          0.265729
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_2.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_2.base",
+          "splatCount": 13951,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 13951,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 19.989789,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 19.989789,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 13951,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 781256,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_3",
+      "parent": "root_4",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          13.019749,
+          11.284192,
+          -1.447364
+        ],
+        "max": [
+          28.230093,
+          27.813555,
+          1.163674
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_3.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_3.base",
+          "splatCount": 6768,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 6768,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 22.613976,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 22.613976,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 6768,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 379008,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_5",
+      "parent": "root_4",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          26.891424,
+          0.548135,
+          1.443865
+        ],
+        "max": [
+          29.096539,
+          11.277803,
+          4.325445
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_5.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_5.base",
+          "splatCount": 393,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 393,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.326597,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.326597,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 393,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 22008,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_4_7",
+      "parent": "root_4",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          26.562313,
+          11.310703,
+          1.58212
+        ],
+        "max": [
+          28.825443,
+          21.766233,
+          4.331119
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_4_7.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_4_7.base",
+          "splatCount": 16,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 16,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.045219,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.045219,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 16,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 896,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5",
+      "parent": "root",
+      "children": [
+        "root_5_0",
+        "root_5_1",
+        "root_5_2",
+        "root_5_3",
+        "root_5_4",
+        "root_5_6"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.221348,
+          -1.448042
+        ],
+        "max": [
+          61.281841,
+          28.15934,
+          4.36763
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5.base",
+          "splatCount": 467,
+          "refinementMode": "replacement",
+          "lodRole": "summary",
+          "sourceSplatCount": 42213,
+          "summarySplatCount": 467,
+          "summaryMethod": "grid-cluster-merge-v0",
+          "approxError": 1.281353,
+          "geometricError": 1.408753,
+          "storageOverhead": 0.011063
+        }
+      ],
+      "lod": {
+        "estimatedError": 1.281353,
+        "approxError": 1.281353,
+        "geometricError": 1.408753,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "summary",
+        "summaryMethod": "grid-cluster-merge-v0",
+        "sourceSplatCount": 42213,
+        "summarySplatCount": 467,
+        "gridSize": [
+          16,
+          16,
+          16
+        ],
+        "targetRatio": 0.08,
+        "storageOverhead": 0.011063,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 26152,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_5_0",
+      "parent": "root_5",
+      "children": [
+        "root_5_0_0",
+        "root_5_0_1",
+        "root_5_0_2",
+        "root_5_0_3",
+        "root_5_0_4",
+        "root_5_0_5",
+        "root_5_0_6",
+        "root_5_0_7"
+      ],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.221348,
+          -1.448042
+        ],
+        "max": [
+          45.168575,
+          12.463378,
+          1.459245
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0.base",
+          "splatCount": 813,
+          "refinementMode": "replacement",
+          "lodRole": "summary",
+          "sourceSplatCount": 40086,
+          "summarySplatCount": 813,
+          "summaryMethod": "grid-cluster-merge-v0",
+          "approxError": 0.619666,
+          "geometricError": 0.752483,
+          "storageOverhead": 0.020281
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.619666,
+        "approxError": 0.619666,
+        "geometricError": 0.752483,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "summary",
+        "summaryMethod": "grid-cluster-merge-v0",
+        "sourceSplatCount": 40086,
+        "summarySplatCount": 813,
+        "gridSize": [
+          15,
+          15,
+          15
+        ],
+        "targetRatio": 0.08,
+        "storageOverhead": 0.020281,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 45528,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_0",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108505,
+          -3.070823,
+          -1.447667
+        ],
+        "max": [
+          37.137798,
+          4.477943,
+          0.00557
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_0.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_0.base",
+          "splatCount": 9212,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 9212,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.115994,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.115994,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 9212,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 515872,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_1",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.138626,
+          -1.101462,
+          -1.447949
+        ],
+        "max": [
+          44.956577,
+          4.620721,
+          0.005452
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_1.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_1.base",
+          "splatCount": 5608,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 5608,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 9.79674,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 9.79674,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 5608,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 314048,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_2",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.108671,
+          8.678745,
+          -1.445885
+        ],
+        "max": [
+          37.135429,
+          12.463378,
+          0.00482
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_2.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_2.base",
+          "splatCount": 1873,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 1873,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 8.992043,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 8.992043,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 1873,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 104888,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_3",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.139175,
+          4.621222,
+          -1.448042
+        ],
+        "max": [
+          43.837341,
+          12.462806,
+          0.005524
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_3.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_3.base",
+          "splatCount": 6677,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 6677,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 10.414831,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 10.414831,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 6677,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 373912,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_4",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.110168,
+          -3.221348,
+          0.005884
+        ],
+        "max": [
+          37.135448,
+          4.619785,
+          1.455624
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_4.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_4.base",
+          "splatCount": 2985,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 2985,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 11.313277,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 11.313277,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 2985,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 167160,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_5",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.141518,
+          0.823948,
+          0.00667
+        ],
+        "max": [
+          45.168575,
+          4.614866,
+          0.359224
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_5.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_5.base",
+          "splatCount": 3118,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 3118,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 8.8842,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 8.8842,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 3118,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 174608,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_6",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.123705,
+          4.621117,
+          0.016865
+        ],
+        "max": [
+          37.13644,
+          11.678381,
+          1.459245
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_6.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_6.base",
+          "splatCount": 798,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 798,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 10.774478,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 10.774478,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 798,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 44688,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_0_7",
+      "parent": "root_5_0",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          37.14922,
+          4.621053,
+          0.005831
+        ],
+        "max": [
+          43.912041,
+          12.410283,
+          1.458426
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_0_7.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_0_7.base",
+          "splatCount": 9815,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 9815,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 10.417192,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 10.417192,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 9815,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 2.05,
+        "gpuUploadBytes": 549640,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_1",
+      "parent": "root_5",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          45.200405,
+          0.115695,
+          -1.390597
+        ],
+        "max": [
+          61.281841,
+          6.241318,
+          0.215513
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_1.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_1.base",
+          "splatCount": 141,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 141,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 17.283386,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 17.283386,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 141,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 7896,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_2",
+      "parent": "root_5",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.152866,
+          12.469031,
+          -1.446375
+        ],
+        "max": [
+          44.681725,
+          23.904373,
+          1.441219
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_2.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_2.base",
+          "splatCount": 139,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 139,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 19.500017,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 19.500017,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 139,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 7784,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_3",
+      "parent": "root_5",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          48.015469,
+          19.557659,
+          -0.661119
+        ],
+        "max": [
+          50.649254,
+          28.15934,
+          0.866494
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_3.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_3.base",
+          "splatCount": 4,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 4,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 9.124655,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 9.124655,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 4,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 224,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_4",
+      "parent": "root_5",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.113077,
+          -0.275422,
+          1.460567
+        ],
+        "max": [
+          40.575027,
+          12.450662,
+          4.36763
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_4.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_4.base",
+          "splatCount": 1819,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 1819,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 17.371831,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 17.371831,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 1819,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 101864,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_5_6",
+      "parent": "root_5",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          29.185974,
+          12.568381,
+          2.212479
+        ],
+        "max": [
+          39.310822,
+          21.287687,
+          4.250579
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_5_6.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_5_6.base",
+          "splatCount": 24,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 24,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 13.516386,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 13.516386,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 24,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.7,
+        "gpuUploadBytes": 1344,
+        "cachePolicy": "evict-when-far"
+      }
+    },
+    {
+      "id": "root_6",
+      "parent": "root",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          4.068749,
+          34.746937,
+          -1.435105
+        ],
+        "max": [
+          27.864471,
+          66.40358,
+          4.068843
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_6.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_6.base",
+          "splatCount": 40,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 40,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 39.983408,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 39.983408,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 40,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 2240,
+        "cachePolicy": "keep-near-camera"
+      }
+    },
+    {
+      "id": "root_7",
+      "parent": "root",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [
+          30.591749,
+          33.500961,
+          -1.402474
+        ],
+        "max": [
+          59.635036,
+          57.940704,
+          2.941466
+        ]
+      },
+      "layers": [
+        {
+          "id": "root_7.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root_7.base",
+          "splatCount": 63,
+          "refinementMode": "replacement",
+          "lodRole": "leaf",
+          "sourceSplatCount": 63,
+          "summarySplatCount": null,
+          "summaryMethod": null,
+          "approxError": 0.0,
+          "geometricError": 38.205803,
+          "storageOverhead": 1.0
+        }
+      ],
+      "lod": {
+        "estimatedError": 0.0,
+        "approxError": 0.0,
+        "geometricError": 38.205803,
+        "refinementPolicy": "hierarchical-replacement",
+        "refinementMode": "replacement",
+        "lodMode": "parent-summary",
+        "lodRole": "leaf",
+        "summaryMethod": null,
+        "sourceSplatCount": 63,
+        "summarySplatCount": null,
+        "gridSize": [
+          0,
+          0,
+          0
+        ],
+        "targetRatio": null,
+        "storageOverhead": 1.0,
+        "opacityWeight": "opacity",
+        "scaleWeight": "max-scale-squared",
+        "colorWeight": "importance-weighted-dc",
+        "shOrder": 0
+      },
+      "runtimeHints": {
+        "priority": 85,
+        "decodeCost": 1.35,
+        "gpuUploadBytes": 3528,
+        "cachePolicy": "keep-near-camera"
+      }
+    }
+  ]
+}

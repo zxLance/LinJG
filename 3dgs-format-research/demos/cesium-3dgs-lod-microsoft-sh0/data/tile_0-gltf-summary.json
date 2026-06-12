@@ -1,0 +1,66 @@
+{
+  "magic": "glTF",
+  "version": 2,
+  "glbBytes": 397300,
+  "extensionsUsed": [
+    "KHR_materials_unlit",
+    "KHR_gaussian_splatting",
+    "KHR_gaussian_splatting_compression_spz_2"
+  ],
+  "extensionsRequired": [
+    "KHR_gaussian_splatting",
+    "KHR_gaussian_splatting_compression_spz_2"
+  ],
+  "primitiveMode": 0,
+  "primitiveExtensions": {
+    "KHR_gaussian_splatting": {
+      "extensions": {
+        "KHR_gaussian_splatting_compression_spz_2": {
+          "bufferView": 0
+        }
+      }
+    }
+  },
+  "attributes": {
+    "POSITION": 0,
+    "KHR_gaussian_splatting:ROTATION": 3,
+    "COLOR_0": 1,
+    "KHR_gaussian_splatting:SCALE": 2
+  },
+  "accessorCount": 4,
+  "bufferViewCount": 1,
+  "bufferCount": 1,
+  "accessors": [
+    {
+      "componentType": 5126,
+      "count": 22178,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "componentType": 5121,
+      "normalized": true,
+      "count": 22178,
+      "type": "VEC4"
+    },
+    {
+      "componentType": 5126,
+      "count": 22178,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 22178,
+      "type": "VEC4"
+    }
+  ]
+}

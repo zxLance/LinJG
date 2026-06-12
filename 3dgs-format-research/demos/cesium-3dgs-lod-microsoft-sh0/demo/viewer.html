@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cesium 3D Gaussian Splat LOD Demo</title>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.139/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <style>
+    html,
+    body,
+    #cesiumContainer {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #05070a;
+    }
+
+    .hud {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      z-index: 2;
+      width: min(390px, calc(100vw - 28px));
+      color: #edf3f8;
+      font-size: 13px;
+    }
+
+    .panel {
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(8, 12, 18, 0.78);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+    }
+
+    .title {
+      font-weight: 650;
+      margin-bottom: 5px;
+    }
+
+    #status {
+      color: #b8c5d2;
+      line-height: 1.45;
+      white-space: pre-line;
+      max-height: 210px;
+      overflow: auto;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    button {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      color: #edf3f8;
+      border-radius: 6px;
+      padding: 7px 10px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+  </style>
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <div class="hud">
+    <div class="panel">
+      <div class="title">Cesium 3DGS LOD Demo</div>
+      <div id="status">loading CesiumJS...</div>
+      <div class="controls">
+        <button id="next">Next View</button>
+        <button id="local">Local Data</button>
+        <button id="ion">Ion Online</button>
+        <button id="sse16">SSE 16</button>
+        <button id="sse64">SSE 64</button>
+        <button id="bounds">Bounds</button>
+        <button id="contentBounds">Content Bounds</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.139/Build/Cesium/Cesium.js"></script>
+  <script>
+    Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmODUzYTQzYi1jMWM2LTQ2MTEtYWE4OS0wYzIwNTkyNjk1NDMiLCJpZCI6MjU5LCJpYXQiOjE3NzcwOTU1MzF9.pWL_6uenO0yB3nCXJNs8wWT9mic_UBo_d1CYDpwaXdQ";
+
+    const statusEl = document.getElementById("status");
+    const webgl2Available = Boolean(document.createElement("canvas").getContext("webgl2"));
+    const state = {
+      tileset: null,
+      loadedTiles: 0,
+      failedTiles: 0,
+      visibleTiles: 0,
+      visiblePoints: 0,
+      lastError: "",
+      renderError: "",
+      offset: null,
+      viewer: null,
+      source: "local"
+    };
+
+    function writeStatus(prefix) {
+      const lines = [
+        prefix || "running",
+        `Cesium.VERSION: ${Cesium.VERSION}`,
+        `GaussianSplat3DTileContent: ${Boolean(Cesium.GaussianSplat3DTileContent)}`,
+        `WebGL2: ${webgl2Available}`,
+        `loaded tiles: ${state.loadedTiles}`,
+        `visible tiles/frame: ${state.visibleTiles}`,
+        `visible points/frame: ${state.visiblePoints}`,
+        `failed tiles: ${state.failedTiles}`,
+        `SSE: ${state.tileset ? state.tileset.maximumScreenSpaceError : "n/a"}`,
+        `source: ${state.source}`
+      ];
+      if (state.lastError) lines.push(`last tile error: ${state.lastError}`);
+      if (state.renderError) lines.push(`render error: ${state.renderError}`);
+      statusEl.textContent = lines.join("\n");
+    }
+
+    async function main() {
+      writeStatus("creating viewer...");
+
+      const viewer = new Cesium.Viewer("cesiumContainer", {
+        timeline: false,
+        animation: false,
+        baseLayerPicker: false,
+        sceneModePicker: false,
+        geocoder: false,
+        homeButton: false,
+        navigationHelpButton: false,
+        infoBox: false,
+        selectionIndicator: false
+      });
+      state.viewer = viewer;
+      viewer.scene.screenSpaceCameraController.enableCollisionDetection = false;
+      viewer.scene.globe.show = false;
+      viewer.scene.skyAtmosphere.show = false;
+      viewer.scene.skyBox.show = false;
+      viewer.scene.backgroundColor = Cesium.Color.fromCssColorString("#05070a");
+
+      const center = Cesium.Cartesian3.fromDegrees(-122.13810992689156, 47.644519699638366, 120);
+      const boundingSphere = new Cesium.BoundingSphere(center, 50.0);
+      state.offset = new Cesium.HeadingPitchRange(
+        Cesium.Math.toRadians(100.0),
+        Cesium.Math.toRadians(-25.0),
+        500.0
+      );
+      viewer.camera.viewBoundingSphere(boundingSphere, state.offset);
+
+      viewer.scene.renderError.addEventListener((scene, error) => {
+        state.renderError = error && (error.message || String(error));
+        writeStatus("rendering stopped");
+      });
+
+      async function loadTileset(source) {
+        if (state.tileset) {
+          viewer.scene.primitives.remove(state.tileset);
+          state.tileset = null;
+        }
+        state.loadedTiles = 0;
+        state.failedTiles = 0;
+        state.visibleTiles = 0;
+        state.visiblePoints = 0;
+        state.lastError = "";
+        state.renderError = "";
+        state.source = source;
+
+        const isLocal = source === "local";
+        writeStatus(isLocal ? "loading local ../data/tileset.json..." : "loading ion asset 4547222...");
+        const tileset = isLocal
+          ? await Cesium.Cesium3DTileset.fromUrl("../data/tileset.json")
+          : await Cesium.Cesium3DTileset.fromIonAssetId(4547222);
+
+        state.tileset = tileset;
+        tileset.maximumScreenSpaceError = isLocal ? 9999 : 16;
+
+        tileset.tileLoad.addEventListener((tile) => {
+          state.loadedTiles += 1;
+          writeStatus("tile loaded");
+        });
+
+        tileset.tileFailed.addEventListener((error) => {
+          state.failedTiles += 1;
+          state.lastError = error && (error.message || error.url || String(error));
+          writeStatus("tile failed");
+        });
+
+        viewer.scene.preRender.addEventListener(() => {
+          state.visibleTiles = 0;
+          state.visiblePoints = 0;
+        });
+
+        tileset.tileVisible.addEventListener((tile) => {
+          state.visibleTiles += 1;
+          const content = tile.content;
+          if (content && Number.isFinite(content.pointsLength)) {
+            state.visiblePoints += content.pointsLength;
+          }
+        });
+
+        viewer.scene.primitives.add(tileset);
+        viewer.camera.viewBoundingSphere(boundingSphere, state.offset);
+        writeStatus(isLocal ? "loaded local data/tileset.json" : "loaded ion asset 4547222");
+      }
+
+      try {
+        await loadTileset("local");
+
+        document.getElementById("next").onclick = () => {
+          state.offset.heading -= Cesium.Math.toRadians(100.0);
+          state.offset.pitch = Cesium.Math.toRadians(-25.0);
+          state.offset.range -= 100.0;
+          if (state.offset.range <= 0.0) state.offset.range = 500.0;
+          viewer.camera.flyToBoundingSphere(boundingSphere, { offset: state.offset });
+        };
+
+        document.getElementById("local").onclick = () => {
+          loadTileset("local").catch((error) => {
+            state.lastError = error && (error.message || String(error));
+            writeStatus("failed to load local data");
+          });
+        };
+
+        document.getElementById("ion").onclick = () => {
+          loadTileset("ion").catch((error) => {
+            state.lastError = error && (error.message || String(error));
+            writeStatus("failed to load ion asset");
+          });
+        };
+
+        document.getElementById("sse16").onclick = () => {
+          tileset.maximumScreenSpaceError = 16;
+          writeStatus("SSE set to 16");
+        };
+
+        document.getElementById("sse64").onclick = () => {
+          tileset.maximumScreenSpaceError = 64;
+          writeStatus("SSE set to 64");
+        };
+
+        document.getElementById("bounds").onclick = () => {
+          tileset.debugShowBoundingVolume = !tileset.debugShowBoundingVolume;
+          writeStatus(`debugShowBoundingVolume: ${tileset.debugShowBoundingVolume}`);
+        };
+
+        document.getElementById("contentBounds").onclick = () => {
+          tileset.debugShowContentBoundingVolume = !tileset.debugShowContentBoundingVolume;
+          writeStatus(`debugShowContentBoundingVolume: ${tileset.debugShowContentBoundingVolume}`);
+        };
+      } catch (error) {
+        state.lastError = error && (error.message || String(error));
+        writeStatus("failed to load tileset");
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>

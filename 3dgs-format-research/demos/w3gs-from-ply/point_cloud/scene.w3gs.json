@@ -1,0 +1,135 @@
+{
+  "format": "W3GS",
+  "version": "0.1",
+  "asset": {
+    "generator": "ply-to-w3gs Prototype 1 converter",
+    "source": "D:\\DATA\\3DGS\\PLY\\point_cloud.ply",
+    "sourceVertexCount": 2830135,
+    "convertedSplats": 200000,
+    "sampling": "evenly-strided by vertex index",
+    "payloadStatus": "generated-raw"
+  },
+  "scene": {
+    "name": "point_cloud",
+    "description": "W3GS Prototype 1 sample converted from a 3DGS PLY.",
+    "coordinateSystem": "local",
+    "upAxis": "Y",
+    "units": "meter"
+  },
+  "bounds": {
+    "type": "aabb",
+    "min": [
+      -3.067545,
+      -5.908927,
+      -7.263915
+    ],
+    "max": [
+      61.281841,
+      66.40358,
+      4.36763
+    ]
+  },
+  "files": {
+    "nodes": "nodes.w3gs.json",
+    "chunks": "chunks.w3gs.json",
+    "payloadBaseUri": "payload/"
+  },
+  "codecs": [
+    {
+      "id": "raw-gaussian-v0",
+      "kind": "raw",
+      "attributeSchema": "gaussian-basic-v0",
+      "decodeTarget": "cpu",
+      "description": "14 float32 values per splat: position, scale, rotation, opacity, color."
+    }
+  ],
+  "entry": {
+    "rootNode": "root",
+    "startupSet": [
+      "root.base"
+    ],
+    "startupPolicy": "show-root-base-before-refinement"
+  },
+  "runtimeProfiles": {
+    "desktop": {
+      "memoryBudgetMB": 512,
+      "maxConcurrentRequests": 8,
+      "preferredCodec": "raw-gaussian-v0"
+    }
+  },
+  "converter": {
+    "baseRatio": 0.25,
+    "minRefinementSplats": 8000,
+    "rawGaussianV0BytesPerSplat": 56,
+    "inputFormat": "binary_little_endian",
+    "inputProperties": [
+      "x",
+      "y",
+      "z",
+      "nx",
+      "ny",
+      "nz",
+      "f_dc_0",
+      "f_dc_1",
+      "f_dc_2",
+      "f_rest_0",
+      "f_rest_1",
+      "f_rest_2",
+      "f_rest_3",
+      "f_rest_4",
+      "f_rest_5",
+      "f_rest_6",
+      "f_rest_7",
+      "f_rest_8",
+      "f_rest_9",
+      "f_rest_10",
+      "f_rest_11",
+      "f_rest_12",
+      "f_rest_13",
+      "f_rest_14",
+      "f_rest_15",
+      "f_rest_16",
+      "f_rest_17",
+      "f_rest_18",
+      "f_rest_19",
+      "f_rest_20",
+      "f_rest_21",
+      "f_rest_22",
+      "f_rest_23",
+      "f_rest_24",
+      "f_rest_25",
+      "f_rest_26",
+      "f_rest_27",
+      "f_rest_28",
+      "f_rest_29",
+      "f_rest_30",
+      "f_rest_31",
+      "f_rest_32",
+      "f_rest_33",
+      "f_rest_34",
+      "f_rest_35",
+      "f_rest_36",
+      "f_rest_37",
+      "f_rest_38",
+      "f_rest_39",
+      "f_rest_40",
+      "f_rest_41",
+      "f_rest_42",
+      "f_rest_43",
+      "f_rest_44",
+      "opacity",
+      "scale_0",
+      "scale_1",
+      "scale_2",
+      "rot_0",
+      "rot_1",
+      "rot_2",
+      "rot_3"
+    ],
+    "fRestCount": 45,
+    "selectedInputVertexRange": [
+      0,
+      2830120
+    ]
+  }
+}

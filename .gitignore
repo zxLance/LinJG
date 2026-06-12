@@ -1,1 +1,23 @@
 spark-src/
+
+# Local browser/runtime cache generated while opening demos.
+3dgs-format-research/demos/.chrome-debug-profile/
+**/.chrome-debug-profile/
+
+# Large downloaded research samples should be kept local and documented,
+# not pushed as normal Git blobs.
+3dgs-format-research/demos/spark-rad-demo/*.rad
+3dgs-format-research/demos/playcanvas-roman-parish-lod/**/*.webp
+3dgs-format-research/demos/w3gs-from-ply/**/payload/*.bin
+3dgs-format-research/datasets/**/*.ply
+
+# Common local dependency/build/cache folders.
+node_modules/
+dist/
+build/
+.cache/
+.vite/
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db

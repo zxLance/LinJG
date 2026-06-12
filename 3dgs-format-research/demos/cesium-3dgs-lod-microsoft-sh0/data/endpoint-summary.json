@@ -1,0 +1,11 @@
+{
+  "sourceAssetId": 4547222,
+  "tilesetUrl": "https://assets.ion.cesium.com/us-east-1/4547222/LOD_3DT_Microsoft_SH0/tileset.json?v=2",
+  "assetVersion": "1.0",
+  "rootGeometricError": 93.29574584960938,
+  "rootRefine": "REPLACE",
+  "rootHasContent": true,
+  "rootChildren": 1,
+  "extensionsUsed": "3DTILES_content_gltf",
+  "extensionsRequired": ""
+}

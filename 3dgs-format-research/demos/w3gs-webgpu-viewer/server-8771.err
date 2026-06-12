@@ -1,0 +1,12 @@
+127.0.0.1 - - [09/Jun/2026 14:58:16] "GET /w3gs-webgpu-viewer/ HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:16] "GET /w3gs-webgpu-viewer/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:16] "GET /w3gs-webgpu-viewer/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:16] "GET /w3gs-from-ply/point_cloud/scene.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:16] "GET /w3gs-from-ply/point_cloud/nodes.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:16] code 404, message File not found
+127.0.0.1 - - [09/Jun/2026 14:58:16] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jun/2026 14:58:16] "GET /w3gs-from-ply/point_cloud/chunks.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:35] "GET /w3gs-from-ply/point_cloud/payload/chunks-0.bin HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:41] "GET /w3gs-from-ply/point_cloud/scene.w3gs.json HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:42] "GET /w3gs-from-ply/point_cloud/payload/chunks-0.bin HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jun/2026 14:58:43] "GET /w3gs-webgpu-viewer/ HTTP/1.1" 200 -

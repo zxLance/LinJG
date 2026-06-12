@@ -1,0 +1,48 @@
+{
+  "reportVersion": "1.0",
+  "generatedAtUtc": "2026-06-11T08:00:17.682Z",
+  "viewerUrl": "http://127.0.0.1:8873/w3gs-webgpu-viewer/?autoload=all&azimuth=0&sample=..%2Fw3gs-from-ply%2Fhuce-zhanting-10k-parent-summary-sh3%2F",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "webgpuStatus": "WebGPU ready",
+  "stateAzimuth0": {
+    "status": "Ready",
+    "profile": "raw-gaussian-sh3-v0",
+    "shDegree": 3,
+    "loadedChunks": 25,
+    "activeChunks": 22,
+    "activeSplats": 10000,
+    "gpuBytes": 2360000,
+    "azimuth": 0
+  },
+  "stateAzimuth180": {
+    "status": "Ready",
+    "profile": "raw-gaussian-sh3-v0",
+    "shDegree": 3,
+    "loadedChunks": 25,
+    "activeChunks": 22,
+    "activeSplats": 10000,
+    "gpuBytes": 2360000,
+    "azimuth": 180
+  },
+  "screenshots": [
+    {
+      "path": "D:\\Documents\\Project\\Python_project\\LinJG\\3dgs-format-research\\demos\\w3gs-from-ply\\huce-zhanting-10k-parent-summary-sh3\\evidence\\sh3-azimuth-0.png",
+      "bytes": 65114,
+      "sha256": "3231d7ebde6da4efa24d5bd33fcafd6850676799dc6f566ede2c8e0f2ae8e520"
+    },
+    {
+      "path": "D:\\Documents\\Project\\Python_project\\LinJG\\3dgs-format-research\\demos\\w3gs-from-ply\\huce-zhanting-10k-parent-summary-sh3\\evidence\\sh3-azimuth-180.png",
+      "bytes": 65144,
+      "sha256": "b199dcc8f761063471d955a2c91af2de0044924ba899cf371cfc3d2acbef40dd"
+    }
+  ],
+  "screenshotsDiffer": true,
+  "checks": {
+    "ready": true,
+    "sh3Profile": true,
+    "payloadLoaded": true,
+    "cameraChanged": true,
+    "renderedImagesDiffer": true
+  },
+  "passed": true
+}

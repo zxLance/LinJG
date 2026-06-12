@@ -1,0 +1,35 @@
+{
+  "directory": "D:\\Documents\\Project\\Python_project\\LinJG\\3dgs-format-research\\demos\\w3gs-from-ply\\huce-zhanting-10k-parent-summary-sh3",
+  "valid": true,
+  "summary": {
+    "errors": 0,
+    "warnings": 1,
+    "info": 1
+  },
+  "statistics": {
+    "version": "0.1",
+    "nodes": 25,
+    "layers": 25,
+    "chunks": 25,
+    "codecs": 1,
+    "attributeSchemas": 1,
+    "payloadFilesReferenced": 1,
+    "payloadStatus": "physical"
+  },
+  "issues": [
+    {
+      "severity": "WARNING",
+      "code": "STARTUP_FALLBACK_UNPROVABLE",
+      "message": "References and dependency closure can be checked, but current fields cannot strictly prove that startupSet is visually renderable and complete on every conforming decoder.",
+      "location": "scene.entry.startupSet",
+      "details": {}
+    },
+    {
+      "severity": "INFO",
+      "code": "RUNTIME_HINTS_STRUCTURAL_ONLY",
+      "message": "Runtime hint types, ranges, and selected internal relationships were checked; their prediction accuracy and performance value were not validated.",
+      "location": "runtimeHints",
+      "details": {}
+    }
+  ]
+}

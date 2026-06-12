@@ -1,0 +1,5 @@
+W3GS conformance: D:\Documents\Project\Python_project\LinJG\3dgs-format-research\demos\w3gs-from-ply\huce-zhanting-10k-parent-summary
+[WARNING] STARTUP_FALLBACK_UNPROVABLE scene.entry.startupSet: References and dependency closure can be checked, but current fields cannot strictly prove that startupSet is visually renderable and complete on every conforming decoder.
+[INFO] RUNTIME_HINTS_STRUCTURAL_ONLY runtimeHints: Runtime hint types, ranges, and selected internal relationships were checked; their prediction accuracy and performance value were not validated.
+PASS: 0 error(s), 1 warning(s), 1 info message(s)
+statistics: {"attributeSchemas": 1, "chunks": 25, "codecs": 1, "layers": 25, "nodes": 25, "payloadFilesReferenced": 1, "payloadStatus": "physical", "version": "0.1"}

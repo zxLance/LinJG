@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W3GS Experiment Platform</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>W3GS Experiment Platform</h1>
+      <p>Prototype 1: read the W3GS sample JSON and compare streaming strategies with one runtime model.</p>
+    </div>
+    <div class="status-pill" id="runStatus">Ready</div>
+  </header>
+
+  <main>
+    <section class="panel sample-panel">
+      <h2>Loaded Sample</h2>
+      <div class="sample-grid">
+        <div><span>Source</span><strong id="sampleSource">Loading</strong></div>
+        <div><span>Name</span><strong id="sampleName">-</strong></div>
+        <div><span>Nodes</span><strong id="sampleNodes">-</strong></div>
+        <div><span>Chunks</span><strong id="sampleChunks">-</strong></div>
+        <div class="wide"><span>Codecs</span><strong id="sampleCodecs">-</strong></div>
+      </div>
+    </section>
+
+    <section class="panel controls">
+      <h2>Experiment</h2>
+      <div class="control-grid">
+        <label>
+          Strategy
+          <select id="strategySelect">
+            <option value="w3gs">W3GS scheduling</option>
+            <option value="full">Full loading</option>
+            <option value="spatial">Spatial-only</option>
+            <option value="progressive">Progressive-only</option>
+          </select>
+        </label>
+        <label>
+          Bandwidth
+          <select id="bandwidthSelect">
+            <option value="3">3 MB/s</option>
+            <option value="8" selected>8 MB/s</option>
+            <option value="20">20 MB/s</option>
+          </select>
+        </label>
+        <label>
+          Latency
+          <select id="latencySelect">
+            <option value="40">40 ms</option>
+            <option value="90" selected>90 ms</option>
+            <option value="180">180 ms</option>
+          </select>
+        </label>
+        <label>
+          GPU budget
+          <select id="budgetSelect">
+            <option value="24">24 MB</option>
+            <option value="48" selected>48 MB</option>
+            <option value="96">96 MB</option>
+          </select>
+        </label>
+      </div>
+      <div class="button-row">
+        <button id="runOneButton">Run selected</button>
+        <button id="runAllButton">Run all baselines</button>
+        <button id="resetButton" class="secondary">Reset</button>
+      </div>
+    </section>
+
+    <section class="panel metrics">
+      <h2>Current Metrics</h2>
+      <div class="metric-grid">
+        <div><span>First render</span><strong id="metricFirst">-</strong></div>
+        <div><span>Downloaded</span><strong id="metricBytes">-</strong></div>
+        <div><span>Requests</span><strong id="metricRequests">-</strong></div>
+        <div><span>Overfetch</span><strong id="metricOverfetch">-</strong></div>
+        <div><span>Local detail</span><strong id="metricDetail">-</strong></div>
+        <div><span>Peak GPU</span><strong id="metricGpu">-</strong></div>
+      </div>
+    </section>
+
+    <section class="panel scene-panel">
+      <div class="section-head">
+        <h2>Scene and Camera Path</h2>
+        <div id="timeLabel">t = 0 ms</div>
+      </div>
+      <canvas id="sceneCanvas" width="920" height="540"></canvas>
+    </section>
+
+    <section class="panel comparison-panel">
+      <h2>Comparison Table</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Strategy</th>
+              <th>First render</th>
+              <th>Downloaded</th>
+              <th>Requests</th>
+              <th>Overfetch</th>
+              <th>Local detail</th>
+              <th>Peak GPU</th>
+              <th>Quality area</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonBody">
+            <tr><td colspan="8">Run all baselines to fill this table.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel log-panel">
+      <h2>Event Log</h2>
+      <pre id="eventLog"></pre>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

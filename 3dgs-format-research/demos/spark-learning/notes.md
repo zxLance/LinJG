@@ -4,7 +4,8 @@ This folder is a small learning snapshot from reading Spark 2.x RAD streaming Lo
 
 ## Demo
 
-- `rad-streaming-demo.html` opens a Three.js scene and loads a remote `.rad` 3DGS scene with `new SplatMesh({ url, paged: true })`.
+- `rad-streaming-demo.html` opens a minimal Three.js scene and loads a remote `.rad` 3DGS scene with `new SplatMesh({ url, paged: true })`.
+- `spark-rad-fullscreen-test.html` is the larger fullscreen HUD version that was originally left in the repository root as `index.html`; it is now archived here with the Spark learning demos.
 - The demo wraps `window.fetch` to print `.rad` requests, so Chrome DevTools can show Spark's `Range: bytes=...` chunk loading.
 - The page imports Spark from npm CDN instead of committing the full Spark source tree.
 

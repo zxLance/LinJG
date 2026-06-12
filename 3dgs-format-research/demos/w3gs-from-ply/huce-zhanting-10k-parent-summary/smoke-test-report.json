@@ -1,0 +1,104 @@
+{
+  "reportVersion": "1.0",
+  "generatedAtUtc": "2026-06-11T06:01:48.1966682Z",
+  "experiment": "W3GS 10K parent-summary smoke test",
+  "commonSource": {
+    "path": "D:\\DATA\\3DGS\\PLY\\HuCeZhanTing.ply",
+    "sha256": "a4624ae67bf4d7f0764b714531f1cc21707ce2b9fa936a5fc6d85dd9cea64cea",
+    "vertexCount": 2830135,
+    "propertyCount": 62,
+    "shOrder": 3
+  },
+  "inputSubset": {
+    "path": "datasets/unified-huce-zhanting/HuCeZhanTing-10k-seed20260611.ply",
+    "vertexCount": 10000,
+    "bytes": 2481748,
+    "sha256": "f72bd6268c12a1ddab79d9ebbcdfbbf29c275fc08395656ae9b8ed433f108cb4",
+    "strictSubsetOf250K": true,
+    "rawRecordBytesMatch250K": true
+  },
+  "converter": {
+    "path": "tools/ply-to-w3gs/convert_ply_to_w3gs.py",
+    "sha256": "45631df20903acd96e48b6d3a2788ae7ede37b0da527fbe8fe6f5ad05b3b978c",
+    "command": "python tools/ply-to-w3gs/convert_ply_to_w3gs.py --input datasets/unified-huce-zhanting/HuCeZhanTing-10k-seed20260611.ply --output demos/w3gs-from-ply/huce-zhanting-10k-parent-summary --max-splats 10000 --lod-mode parent-summary --max-leaf-splats 2500 --max-depth 4",
+    "wallSeconds": 0.811498,
+    "peakRssBytes": null,
+    "peakRssNote": "Not measured reliably with the Python standard library / shell on Windows."
+  },
+  "output": {
+    "path": "demos/w3gs-from-ply/huce-zhanting-10k-parent-summary",
+    "formatFilesBytes": 662637,
+    "payloadBytes": 588336,
+    "firstRenderBytes": 9744,
+    "nodes": 25,
+    "layers": 25,
+    "chunks": 25,
+    "convertedSplats": 10000,
+    "leafOriginalSplats": 10000,
+    "internalSummarySplats": 506,
+    "totalPayloadSplats": 10506,
+    "summaryOverhead": 0.0506,
+    "files": [
+      {
+        "path": "scene.w3gs.json",
+        "bytes": 3516,
+        "sha256": "fedc3485a6742ca088ff6502b02f4bc892383b05d8504b9f90d3b3f21f9c17cb"
+      },
+      {
+        "path": "nodes.w3gs.json",
+        "bytes": 42613,
+        "sha256": "49ea8106739a1680cd8060a1b48b67063365825d4003e7501857f4c3cef8d406"
+      },
+      {
+        "path": "chunks.w3gs.json",
+        "bytes": 28172,
+        "sha256": "7ae4721dd41bde3fa5766174afcde35ddc7e8a54c0952a9576ef056a6935d83e"
+      },
+      {
+        "path": "payload/chunks-0.bin",
+        "bytes": 588336,
+        "sha256": "59c0d33ab1bdaafcb9b90da4bcdd1c7df8d76cea132d713f6624f1c20b593fd0"
+      }
+    ]
+  },
+  "attributeLoss": {
+    "sourceShOrder": 3,
+    "sourceFRestCount": 45,
+    "targetShOrder": 0,
+    "targetProfile": "raw-gaussian-v0",
+    "targetFields": [
+      "position",
+      "scale",
+      "rotation",
+      "opacity",
+      "color/DC"
+    ],
+    "dropped": [
+      "normal nx/ny/nz",
+      "f_rest_0..44"
+    ],
+    "note": "The common PLY subset remains unchanged; SH3 to SH0 loss occurs only in the W3GS conversion chain."
+  },
+  "validation": {
+    "tool": "tools/w3gs-validator/validate_w3gs.py",
+    "sha256": "e99b870ac61857baa45ec1e15da3a34267c361c4a4fd21a98f24d2c1f769da17",
+    "exitCode": 0,
+    "wallSeconds": 0.451202,
+    "reportJson": "validation-report.json",
+    "reportText": "validation-report.txt",
+    "errors": 0,
+    "warnings": 1,
+    "info": 1
+  },
+  "viewerCompatibility": {
+    "app": "demos/w3gs-webgpu-viewer/app.js",
+    "sha256": "09be40dced5d9a3017a3849f0b095b548af37a6166052f25c782223b39661fd2",
+    "nodeCheck": "passed",
+    "manifestReferences": "passed",
+    "rawStrideBytes": 56,
+    "startupChunk": "chunk.root.base",
+    "payloadRanges": "passed",
+    "browserWebGpuRender": "not run in this command-level smoke test",
+    "note": "Viewer default sample path was not changed; the generated sample matches its loader and raw-gaussian-v0 structural expectations."
+  }
+}

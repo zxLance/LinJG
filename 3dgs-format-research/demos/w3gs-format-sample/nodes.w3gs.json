@@ -1,0 +1,411 @@
+{
+  "version": "0.1",
+  "tree": {
+    "root": "root",
+    "nodeCount": 8,
+    "relationship": "explicit-parent-and-children"
+  },
+  "nodes": [
+    {
+      "id": "root",
+      "parent": null,
+      "children": ["left_room", "right_room", "back_wall"],
+      "bounds": {
+        "type": "aabb",
+        "min": [-6.0, -1.0, -4.0],
+        "max": [6.0, 4.0, 4.0]
+      },
+      "layers": [
+        {
+          "id": "root.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.root.base",
+          "splatCount": 12000,
+          "refinementMode": "replace-by-children"
+        },
+        {
+          "id": "root.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.root.r1",
+          "splatCount": 28000,
+          "refinementMode": "additive"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.18,
+        "screenSizeExit": 0.12,
+        "estimatedError": 0.18,
+        "opacityError": 0.08,
+        "densityRatio": 0.08,
+        "sortRisk": "low",
+        "refinementPolicy": "prefer-children-then-refinement"
+      },
+      "runtimeHints": {
+        "priority": 100,
+        "decodeCost": 1.0,
+        "gpuUploadBytes": 1440000,
+        "cachePolicy": "keep",
+        "mobile": "required"
+      }
+    },
+    {
+      "id": "left_room",
+      "parent": "root",
+      "children": ["desk", "window"],
+      "bounds": {
+        "type": "aabb",
+        "min": [-6.0, -1.0, -4.0],
+        "max": [0.0, 4.0, 4.0]
+      },
+      "layers": [
+        {
+          "id": "left_room.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.left_room.base",
+          "splatCount": 18000,
+          "refinementMode": "replace-by-children"
+        },
+        {
+          "id": "left_room.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.left_room.r1",
+          "splatCount": 54000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "left_room.r2",
+          "level": 2,
+          "kind": "refinement",
+          "chunk": "chunk.left_room.r2",
+          "splatCount": 132000,
+          "refinementMode": "additive"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.24,
+        "screenSizeExit": 0.18,
+        "estimatedError": 0.12,
+        "opacityError": 0.06,
+        "densityRatio": 0.16,
+        "sortRisk": "medium",
+        "refinementPolicy": "prefer-visible-children"
+      },
+      "runtimeHints": {
+        "priority": 80,
+        "decodeCost": 1.4,
+        "gpuUploadBytes": 2760000,
+        "cachePolicy": "keep-near-camera",
+        "mobile": "base-only-by-default"
+      }
+    },
+    {
+      "id": "right_room",
+      "parent": "root",
+      "children": ["cabinet", "chair"],
+      "bounds": {
+        "type": "aabb",
+        "min": [0.0, -1.0, -4.0],
+        "max": [6.0, 4.0, 4.0]
+      },
+      "layers": [
+        {
+          "id": "right_room.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.right_room.base",
+          "splatCount": 17000,
+          "refinementMode": "replace-by-children"
+        },
+        {
+          "id": "right_room.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.right_room.r1",
+          "splatCount": 48000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "right_room.r2",
+          "level": 2,
+          "kind": "refinement",
+          "chunk": "chunk.right_room.r2",
+          "splatCount": 118000,
+          "refinementMode": "additive"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.24,
+        "screenSizeExit": 0.18,
+        "estimatedError": 0.13,
+        "opacityError": 0.06,
+        "densityRatio": 0.15,
+        "sortRisk": "medium",
+        "refinementPolicy": "prefer-visible-children"
+      },
+      "runtimeHints": {
+        "priority": 78,
+        "decodeCost": 1.4,
+        "gpuUploadBytes": 2680000,
+        "cachePolicy": "keep-near-camera",
+        "mobile": "base-only-by-default"
+      }
+    },
+    {
+      "id": "back_wall",
+      "parent": "root",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [-6.0, -1.0, 3.1],
+        "max": [6.0, 4.0, 4.0]
+      },
+      "layers": [
+        {
+          "id": "back_wall.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.back_wall.base",
+          "splatCount": 9000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "back_wall.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.back_wall.r1",
+          "splatCount": 26000,
+          "refinementMode": "additive"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.2,
+        "screenSizeExit": 0.14,
+        "estimatedError": 0.1,
+        "opacityError": 0.04,
+        "densityRatio": 0.2,
+        "sortRisk": "low",
+        "refinementPolicy": "prefer-refinement"
+      },
+      "runtimeHints": {
+        "priority": 55,
+        "decodeCost": 0.8,
+        "gpuUploadBytes": 920000,
+        "cachePolicy": "evict-when-far",
+        "mobile": "optional"
+      }
+    },
+    {
+      "id": "desk",
+      "parent": "left_room",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [-5.2, -0.4, -2.8],
+        "max": [-1.4, 1.6, 0.7]
+      },
+      "layers": [
+        {
+          "id": "desk.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.desk.base",
+          "splatCount": 10000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "desk.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.desk.r1",
+          "splatCount": 52000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "desk.r2",
+          "level": 2,
+          "kind": "refinement",
+          "chunk": "chunk.desk.r2",
+          "splatCount": 140000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "desk.r3",
+          "level": 3,
+          "kind": "refinement",
+          "chunk": "chunk.desk.r3",
+          "splatCount": 230000,
+          "refinementMode": "additive"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.32,
+        "screenSizeExit": 0.24,
+        "estimatedError": 0.05,
+        "opacityError": 0.03,
+        "densityRatio": 0.1,
+        "sortRisk": "high",
+        "refinementPolicy": "prefer-refinement-before-siblings"
+      },
+      "runtimeHints": {
+        "priority": 95,
+        "decodeCost": 2.2,
+        "gpuUploadBytes": 5120000,
+        "cachePolicy": "keep-near-camera",
+        "mobile": "load-until-r1"
+      }
+    },
+    {
+      "id": "window",
+      "parent": "left_room",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [-5.8, 0.8, 1.2],
+        "max": [-3.0, 3.5, 3.8]
+      },
+      "layers": [
+        {
+          "id": "window.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.window.base",
+          "splatCount": 8000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "window.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.window.r1",
+          "splatCount": 34000,
+          "refinementMode": "replacement"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.28,
+        "screenSizeExit": 0.2,
+        "estimatedError": 0.08,
+        "opacityError": 0.11,
+        "densityRatio": 0.19,
+        "sortRisk": "high",
+        "refinementPolicy": "prefer-replacement"
+      },
+      "runtimeHints": {
+        "priority": 70,
+        "decodeCost": 1.3,
+        "gpuUploadBytes": 1280000,
+        "cachePolicy": "evict-when-far",
+        "mobile": "optional"
+      }
+    },
+    {
+      "id": "cabinet",
+      "parent": "right_room",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [1.0, -0.6, -3.4],
+        "max": [4.5, 2.4, -0.6]
+      },
+      "layers": [
+        {
+          "id": "cabinet.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.cabinet.base",
+          "splatCount": 9500,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "cabinet.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.cabinet.r1",
+          "splatCount": 42000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "cabinet.r2",
+          "level": 2,
+          "kind": "refinement",
+          "chunk": "chunk.cabinet.r2",
+          "splatCount": 112000,
+          "refinementMode": "additive"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.3,
+        "screenSizeExit": 0.22,
+        "estimatedError": 0.06,
+        "opacityError": 0.04,
+        "densityRatio": 0.12,
+        "sortRisk": "medium",
+        "refinementPolicy": "prefer-refinement"
+      },
+      "runtimeHints": {
+        "priority": 88,
+        "decodeCost": 1.9,
+        "gpuUploadBytes": 3560000,
+        "cachePolicy": "keep-near-camera",
+        "mobile": "load-until-r1"
+      }
+    },
+    {
+      "id": "chair",
+      "parent": "right_room",
+      "children": [],
+      "bounds": {
+        "type": "aabb",
+        "min": [3.2, -0.8, 0.2],
+        "max": [5.5, 1.7, 2.8]
+      },
+      "layers": [
+        {
+          "id": "chair.base",
+          "level": 0,
+          "kind": "base",
+          "chunk": "chunk.chair.base",
+          "splatCount": 7000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "chair.r1",
+          "level": 1,
+          "kind": "refinement",
+          "chunk": "chunk.chair.r1",
+          "splatCount": 28000,
+          "refinementMode": "additive"
+        },
+        {
+          "id": "chair.r2",
+          "level": 2,
+          "kind": "refinement",
+          "chunk": "chunk.chair.r2",
+          "splatCount": 76000,
+          "refinementMode": "additive"
+        }
+      ],
+      "lod": {
+        "screenSizeEnter": 0.3,
+        "screenSizeExit": 0.22,
+        "estimatedError": 0.07,
+        "opacityError": 0.05,
+        "densityRatio": 0.13,
+        "sortRisk": "medium",
+        "refinementPolicy": "prefer-refinement"
+      },
+      "runtimeHints": {
+        "priority": 82,
+        "decodeCost": 1.6,
+        "gpuUploadBytes": 2400000,
+        "cachePolicy": "evict-when-far",
+        "mobile": "load-until-r1"
+      }
+    }
+  ]
+}
+
